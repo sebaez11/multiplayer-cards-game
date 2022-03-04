@@ -1,0 +1,94 @@
+:root {
+  --principal-family: 'Indie Flower', cursive;
+  --font-size-x-medium: 2rem;
+  --font-size-medium: 1.5rem;
+  --font-size-x-big: 5rem;
+  --color-white: white;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+  font-size: 10px !important;
+  color: var(--color-white) !important;
+}
+
+header {
+  background-image: url('../images/header.png');
+  min-height: 100vh;
+  min-width: 100vw;
+  overflow: hidden;
+  background-size: cover;
+  background-position: top right;
+}
+
+nav {
+  background-color: rgba(200, 192, 196, 0.2) !important;
+  color: white;
+  font-family: var(--principal-family);
+  font-size: 2rem !important;
+  padding: 0 1rem;
+}
+
+nav #brand img {
+  width: 50px;
+}
+
+nav #logo-title {
+  font-size: var(--font-size-x-medium) !important;
+  color: var(--color-white);
+}
+
+nav .items-nav {
+  font-size: var(--font-size-medium) !important;
+  color: var(--color-white);
+}
+
+header .banner-container {
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 55vh;
+  line-height: 5rem;
+}
+
+header .banner-container .banner-text {
+  font-size: var(--font-size-x-big) !important;
+  font-family: var(--principal-family);
+  text-align: center;
+  text-shadow: 6px 6px 9px rgba(150, 150, 150, 1);
+}
+
+/* Slice */
+
+.content {
+  margin: 0 auto;
+  display: flex;
+}
+/* Arrow & Hover Animation */
+#more-arrows {
+  width: 75px;
+  height: 65px;
+  margin: 0 auto;
+  margin-top: 3.5rem;
+  cursor: pointer;
+}
+#more-arrows:hover polygon {
+  fill: #fff;
+  transition: all 0.2s ease-out;
+}
+#more-arrows:hover polygon.arrow-bottom {
+  transform: translateY(-18px);
+}
+#more-arrows:hover polygon.arrow-top {
+  transform: translateY(18px);
+}
+polygon {
+  fill: #fff;
+  transition: all 0.2s ease-out;
+}
+polygon.arrow-middle {
+  opacity: 0.75;
+}
+polygon.arrow-top {
+  opacity: 0.5;
+}
