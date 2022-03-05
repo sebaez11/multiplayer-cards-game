@@ -8,6 +8,13 @@ package com.is.models;
 public class card_set {
     int id,total_cards;
     String image,name;
+    
+    public card_set(){
+        this.id = 0;
+        this.total_cards = 0;
+        this.image = "";
+        this.name = "";
+    }
 
     public card_set(int id, int total_cards, String image, String name) {
         this.id = id;

@@ -8,12 +8,27 @@ package com.is.models;
  *
  * @author drago
  */
-public class cards {
+public class Card {
     int id,attack,defense,card_set_id,healing,get_less_damage,attack_all_enemies,duplicate_damage_less_defense;
     String name, description,image;
     boolean return_damage,divide_damage,invert_basic_attributes;
+    
+    public Card(){
+        this.id = 0;
+        this.attack = 0;
+        this.defense = 0;
+        this.card_set_id = 0;
+        this.healing = 0;
+        this.get_less_damage = 0;
+        this.attack_all_enemies = 0;
+        this.duplicate_damage_less_defense = 0;
+        this.name = "";
+        this.description = "";
+        this.image = "";
 
-    public cards(int id, int attack, int defense, int card_set_id, int healing, int get_less_damage, int attack_all_enemies, int duplicate_damage_less_defense, String name, String description, String image, boolean return_damage, boolean divide_damage, boolean invert_basic_attributes) {
+    }
+
+    public Card(int id, int attack, int defense, int card_set_id, int healing, int get_less_damage, int attack_all_enemies, int duplicate_damage_less_defense, String name, String description, String image, boolean return_damage, boolean divide_damage, boolean invert_basic_attributes) {
         this.id = id;
         this.attack = attack;
         this.defense = defense;

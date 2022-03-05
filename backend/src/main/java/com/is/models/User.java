@@ -4,11 +4,19 @@
  */
 package com.is.models;
 
-public class Users {
+public class User {
     int id,role_id;
     String username, email, password;
+    
+    public User(){
+        this.id = 0;
+        this.role_id = 0;
+        this.username = "";
+        this.email = "";
+        this.password = "";
+    }
 
-    public Users(int id, int role_id, String username, String email, String password) {
+    public User(int id, int role_id, String username, String email, String password) {
         this.id = id;
         this.role_id = role_id;
         this.username = username;
