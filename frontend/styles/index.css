@@ -1,9 +1,14 @@
 :root {
   --principal-family: 'Indie Flower', cursive;
   --secondary-family: 'Sansita Swashed', cursive;
-  --font-size-x-medium: 2rem;
-  --font-size-medium: 1.5rem;
-  --font-size-x-big: 5rem;
+  --font-size-xxx-small: 1.5rem;
+  --font-size-xx-small: 2rem;
+  --font-size-small: 3.5rem;
+  --font-size-x-small: 2.5rem;
+  --font-size-x-medium: 5.5rem;
+  --font-size-medium: 4.5rem;
+  --font-size-big: 6rem;
+  --font-size-x-big: 7.5rem;
   --color-white: white;
   --color-black: black;
 }
@@ -29,7 +34,6 @@ nav {
   background-color: rgba(200, 192, 196, 0) !important;
   color: white;
   font-family: var(--principal-family);
-  font-size: 2rem !important;
   padding: 0 1rem;
 }
 
@@ -38,20 +42,20 @@ nav #brand img {
 }
 
 nav #logo-title {
-  font-size: var(--font-size-x-medium) !important;
+  font-size: var(--font-size-small) !important;
   color: var(--color-white) !important;
 }
 
 nav .items-nav {
-  font-size: var(--font-size-medium) !important;
+  font-size: var(--font-size-x-small) !important;
   color: var(--color-white) !important;
 }
 
 header .banner-container {
-  width: 50%;
+  width: 60%;
   margin: 0 auto;
-  margin-top: 55vh;
-  line-height: 5rem;
+  margin-top: 60vh;
+  line-height: 7rem;
 }
 
 header .banner-container .banner-text {
@@ -63,10 +67,7 @@ header .banner-container .banner-text {
 }
 
 main {
-  padding: 15vh 0;
   background-image: url('../images/wall.jpg');
-  min-height: 100vh;
-  min-width: 100%;
   overflow: hidden;
   background-size: cover;
   background-position: top right;
@@ -79,6 +80,7 @@ main {
 }
 
 .info-container {
+  margin: 15vh 0;
   background-color: var(--color-white);
   height: 70vh;
   display: flex;
@@ -105,7 +107,7 @@ main {
 }
 
 .info-container .banner-text-container .banner-text-title {
-  font-size: var(--font-size-x-big) !important;
+  font-size: var(--font-size-x-medium) !important;
   color: var(--color-black) !important;
   font-family: var(--principal-family);
   line-height: 5rem;
@@ -113,11 +115,110 @@ main {
   margin-bottom: 1rem;
   padding: 2rem 0;
 }
+
+.rules-container {
+  height: 100vh;
+  padding-top: 5vh 0;
+  padding-bottom: 5vh;
+  background-color: rgb(242, 242, 242);
+}
+
+.carousel-container {
+  height: 75vh !important;
+}
+.carousel-inner {
+  height: 100%;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+}
+
+.games-container {
+  height: 100%;
+  padding: 0 3rem;
+  padding-top: 5vh 0;
+  padding-bottom: 10vh;
+  background-color: #2b2a29;
+  font-family: var(--principal-family);
+}
+.games-cards {
+  padding-left: 2.5vh;
+}
+.title-section {
+  font-size: var(--font-size-medium);
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+  padding-left: 2.5vh;
+  font-weight: bold;
+  font-family: var(--principal-family);
+}
+
+.color-white {
+  color: var(--color-white);
+}
+.color-black {
+  color: var(--color-black);
+}
+
 /* Slice */
 
 .content {
   margin: 0 auto;
   display: flex;
+}
+
+/* Bootstrap modifications */
+.carousel-indicators [data-bs-target] {
+  width: 10px !important;
+  height: 10px !important;
+  border-radius: 50%;
+}
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+  width: 4rem !important;
+  height: 4rem !important;
+}
+
+/*  Cards */
+
+.games-cards .card {
+  background: #222;
+  border: 1px solid #dd2476;
+  color: rgba(250, 250, 250, 0.8);
+  margin-bottom: 2rem;
+  height: 30rem;
+  width: 95%;
+  padding: 0;
+  border-radius: 1rem;
+  font-family: var(--principal-family);
+  font-size: var(--font-size-small) !important;
+}
+.games-cards .card-img-top {
+  height: 80%;
+  border-top-right-radius: 1rem;
+  border-top-left-radius: 1rem;
+}
+.games-cards .card .button-card {
+  margin-right: 1rem;
+  font-size: var(--font-size-xxx-small);
+}
+.games-cards .card-title {
+  font-weight: bold;
+  font-size: var(--font-size-xx-small);
+}
+
+footer {
+  background-color: var(--color-black);
+  color: var(--color-white);
+  font-size: var(--font-size-x-small);
+  font-family: var(--principal-family);
+  padding: 2.5vh;
+}
+
+footer .copyrigth {
+  font-size: var(--font-size-xx-small) !important;
 }
 /* Arrow & Hover Animation */
 #more-arrows {
