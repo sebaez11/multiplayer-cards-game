@@ -1,29 +1,32 @@
 :root {
   --principal-family: 'Indie Flower', cursive;
+  --secondary-family: 'Sansita Swashed', cursive;
   --font-size-x-medium: 2rem;
   --font-size-medium: 1.5rem;
   --font-size-x-big: 5rem;
   --color-white: white;
+  --color-black: black;
+}
+html {
+  font-size: 62.5%;
 }
 * {
   margin: 0;
   padding: 0;
   box-sizing: 0;
-  font-size: 10px !important;
-  color: var(--color-white) !important;
 }
 
 header {
   background-image: url('../images/header.png');
   min-height: 100vh;
-  min-width: 100vw;
+  min-width: 100%;
   overflow: hidden;
   background-size: cover;
   background-position: top right;
 }
 
 nav {
-  background-color: rgba(200, 192, 196, 0.2) !important;
+  background-color: rgba(200, 192, 196, 0) !important;
   color: white;
   font-family: var(--principal-family);
   font-size: 2rem !important;
@@ -36,12 +39,12 @@ nav #brand img {
 
 nav #logo-title {
   font-size: var(--font-size-x-medium) !important;
-  color: var(--color-white);
+  color: var(--color-white) !important;
 }
 
 nav .items-nav {
   font-size: var(--font-size-medium) !important;
-  color: var(--color-white);
+  color: var(--color-white) !important;
 }
 
 header .banner-container {
@@ -56,8 +59,60 @@ header .banner-container .banner-text {
   font-family: var(--principal-family);
   text-align: center;
   text-shadow: 6px 6px 9px rgba(150, 150, 150, 1);
+  color: var(--color-white) !important;
 }
 
+main {
+  padding: 15vh 0;
+  background-image: url('../images/wall.jpg');
+  min-height: 100vh;
+  min-width: 100%;
+  overflow: hidden;
+  background-size: cover;
+  background-position: top right;
+}
+
+.layer {
+  width: 100vw;
+  position: absolute;
+  background-color: rgba(200, 192, 196, 0.5) !important;
+}
+
+.info-container {
+  background-color: var(--color-white);
+  height: 70vh;
+  display: flex;
+}
+.info-container .banner-image {
+  flex: 1.4;
+  display: inline-block;
+  height: 100%;
+  background-image: url('../images/banner1.jpg');
+  overflow: hidden;
+  background-size: cover;
+  background-position: top right;
+  -webkit-clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 0% 100%);
+  clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+.info-container .banner-text-container {
+  flex: 1;
+  display: inline-block;
+  color: var(--color-black);
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.info-container .banner-text-container .banner-text-title {
+  font-size: var(--font-size-x-big) !important;
+  color: var(--color-black) !important;
+  font-family: var(--principal-family);
+  line-height: 5rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  padding: 2rem 0;
+}
 /* Slice */
 
 .content {
