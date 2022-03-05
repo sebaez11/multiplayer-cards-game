@@ -18,7 +18,7 @@ public class Database {
     
     private static Connection connection = null;
 
-    public static Connection getConecction() throws SQLException {
+    public static Connection getConection() throws SQLException {
 
         String ip = "localhost";
         String basedatos = "playcards_DB";
@@ -30,8 +30,8 @@ public class Database {
         try {
             if (Database.connection == null) {
                 Class.forName("org.postgresql.Driver");
-                Database.connection = DriverManager.getConnection(url, usuario, pass);
-                Database.connection.setAutoCommit(false);
+                Database.connection = DriverManager.getConnection(url, usuario, pass);                
+                //Database.connection.setAutoCommit(false);
                 return Database.connection;
             }
         } catch (Exception ex) {

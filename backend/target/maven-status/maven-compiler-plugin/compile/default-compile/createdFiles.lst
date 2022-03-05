@@ -1,0 +1,7 @@
+Main.class
+com/is/models/User.class
+com/is/models/Card.class
+com/is/models/Role.class
+com/is/database/repositories/UserQueries.class
+com/is/database/Database.class
+com/is/models/card_set.class
