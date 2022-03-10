@@ -275,13 +275,13 @@ main {
 }
 
 #createCard {
-  transform: translateY(25vh);
+  transform: translateY(0vh);
 }
 
 #createCard .modal-dialog {
-  width: 25vw !important;
+  width: auto !important;
   height: auto !important;
-  max-width: 80vw !important;
+  min-width: 50vw !important;
   font-size: var(--font-size-xx-small) !important;
   font-family: var(--principal-family);
 }
@@ -321,7 +321,9 @@ main {
 #editModal .modal-dialog .form-control {
   font-size: var(--font-size-xx-small) !important;
 }
-
+#editModal .card-body .button-card {
+  font-size: var(--font-size-xx-small) !important;
+}
 #editCard {
   transform: translateY(0vh);
 }
@@ -329,7 +331,7 @@ main {
 #editCard .modal-dialog {
   width: auto !important;
   height: auto !important;
-  min-width: 80vw !important;
+  min-width: 50vw !important;
   font-size: var(--font-size-xx-small) !important;
   font-family: var(--principal-family);
 }
@@ -345,7 +347,12 @@ main {
 #editCard .modal-dialog .form-control {
   font-size: var(--font-size-xx-small) !important;
 }
-
+#editCard .card-body .button-card {
+  font-size: var(--font-size-xxx-small) !important;
+}
+#list-games-admin .card-admin-list .card-body .button-card {
+  font-size: var(--font-size-xxx-small) !important;
+}
 #deleteModal {
   transform: translateY(25vh);
 }

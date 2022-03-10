@@ -460,7 +460,7 @@
                                                 placeholder="0" value="Otto" required>
 
                                         </div>
-                                        <button type="button" class="mb-3 btn btn-big btn-success"
+                                        <button type="button" class="mb-3 btn btn-success"
                                             style="margin: 0 auto;display: block;width: 10rem;"
                                             data-bs-dismiss="modal">Editar</button>
 
@@ -486,7 +486,8 @@
                                         </div>
 
                                     </div>
-                                    <div class="row games-cards games-cards-admin games-admin games-admin-list">
+                                    <div class="row games-cards games-cards-admin games-admin games-admin-list"
+                                        id="list-games-admin">
 
                                         <div class="col-2 p-0">
                                             <div class="card card-admin card-admin-list">
@@ -756,43 +757,98 @@
             </div>
 
         </div>
-        <!-- Modal Create Game -->
-        <div class="modal fade modal-create-game" id="createCard" tabindex="-1" aria-labelledby="exampleModalLabel"
+        <!-- Modal Create Card -->
+        <div class="modal fade modal-edit-game" id="createCard" tabindex="-1" aria-labelledby="exampleModalLabel"
             aria-hidden="true">
             <div class="modal-dialog">
-                <div class="modal-content">
+                <div class="modal-content row">
                     <div class="modal-header">
                         <h5 class="modal-title" id="exampleModalLabel">Crear Carta</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
-                    <div class="modal-body">
-                        <form class="md-form" novalidate>
-                            <div class="file-field d-flex flex-column align-items-center mb-4">
-                                <div class="mb-4">
-                                    <img src="./images/card2.jpg" class="rounded-circle z-depth-1-half avatar-pic"
-                                        alt="example placeholder avatar">
-                                </div>
-                                <label class="btn btn-primary" for="my-file-selector">
-                                    <input id="my-file-selector" type="file" class="d-none">
-                                    Añadir Imagen
-                                </label>
+                    <div class="col-12">
+                        <div class="file-field d-flex flex-column align-items-center mb-4">
+                            <div class="mb-4">
+                                <img src="./images/card2.jpg" class="rounded-circle z-depth-1-half avatar-pic"
+                                    alt="example placeholder avatar">
                             </div>
-                            <div class="form-row">
-                                <div class="col-12 mb-3">
-                                    <label for="validationTooltip01">Nombre del juego</label>
-                                    <input type="text" class="form-control" id="validationTooltip01"
-                                        placeholder="ej. Uno" required>
-
+                            <label class="btn btn-primary" for="my-file-selector">
+                                <input id="my-file-selector" type="file" class="d-none">
+                                Añadir Imagen
+                            </label>
+                        </div>
+                    </div>
+                    <div class="modal-body row">
+                        <div class="col-6">
+                            <h2 style="font-weight: bold; text-align: center; font-size: x-large;">Características
+                                Basicas</h2>
+                            <form class="md-form" novalidate>
+                                <div class="form-row">
+                                    <div class="col-12 mb-3">
+                                        <label for="nameCard">Nombre de la carta</label>
+                                        <input type="text" class="form-control" id="nameCard" placeholder="ej. Uno"
+                                            required>
+                                    </div>
+                                    <div class="col-12 mb-3">
+                                        <label for="attackCard">Ataque</label>
+                                        <input type="number" min="0" class="form-control" id="attackCard"
+                                            placeholder="ej. 20" required>
+                                    </div>
+                                    <div class="col-12 mb-3">
+                                        <label for="defenseCard">Defensa</label>
+                                        <input type="number" min="0" class="form-control" id="defenseCard"
+                                            placeholder="ej. 20" required>
+                                    </div>
+                                    <div class="col-12 mb-3">
+                                        <label for="descriptionCard">Descripcion</label>
+                                        <textarea class="form-control" id="descriptionCard" placeholder="ej. Uno"
+                                            required></textarea>
+                                    </div>
                                 </div>
-                                <div class="col-12 mb-3">
-                                    <label for="validationTooltip02">Numero de Cartas</label>
-                                    <input type="number" min="1" class="form-control" id="validationTooltip02"
-                                        placeholder="0" value="Otto" required>
 
+                            </form>
+                        </div>
+                        <div class="col-6">
+                            <h2 style="font-weight: bold; text-align: center;font-size: x-large;">Características
+                                Especiales</h2>
+                            <form class="md-form" novalidate>
+                                <div class="form-row">
+                                    <div class="col-12 mb-3">
+                                        <label for="healingCard">Recuperación</label>
+                                        <input type="number" min="0" class="form-control" id="healingCard"
+                                            placeholder="ej. 20">
+                                    </div>
+                                    <div class="col-12 mb-3">
+                                        <label for="getLessDamageCard">Obtener menos daño</label>
+                                        <input type="number" min="0" class="form-control" id="getLessDamageCard"
+                                            placeholder="ej. 20">
+                                    </div>
+                                    <div class="col-12 mb-3">
+                                        <label for="attackAllEnemiesCard">Ataque a todos los enemigos</label>
+                                        <input type="number" min="0" class="form-control" id="attackAllEnemiesCard"
+                                            placeholder="ej. 20">
+                                    </div>
+                                    <div class="col-12 mb-3">
+                                        <label for="duplicateDamageLessDefenseCard">Duplicar daño menos defensa </label>
+                                        <input type="number" min="0" class="form-control"
+                                            id="duplicateDamageLessDefenseCard" placeholder="ej. Uno">
+                                    </div>
+                                    <div class="col-12 mb-3">
+                                        <label for="returnDamage">Devolver Daño </label>
+                                        <input type="checkbox" id="returnDamage">
+                                    </div>
+                                    <div class="col-12 mb-3">
+                                        <label for="returnDamage">Dividir Daño </label>
+                                        <input type="checkbox" id="returnDamage">
+                                    </div>
+                                    <div class="col-12 mb-3">
+                                        <label for="returnDamage">Invertir Atributos Basicos </label>
+                                        <input type="checkbox" id="returnDamage">
+                                    </div>
                                 </div>
-                            </div>
+                            </form>
+                        </div>
 
-                        </form>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-target="#editModal"
@@ -802,43 +858,98 @@
                 </div>
             </div>
         </div>
-        <!-- Modal Edit Game -->
+        <!-- Modal Edit Card -->
         <div class="modal fade modal-edit-game" id="editCard" tabindex="-1" aria-labelledby="exampleModalLabel"
             aria-hidden="true">
             <div class="modal-dialog">
-                <div class="modal-content">
+                <div class="modal-content row">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Editar Juego</h5>
+                        <h5 class="modal-title" id="exampleModalLabel">Editar Cartas</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
-                    <div class="modal-body">
-                        <form class="md-form" novalidate>
-                            <div class="file-field d-flex flex-column align-items-center mb-4">
-                                <div class="mb-4">
-                                    <img src="./images/card2.jpg" class="rounded-circle z-depth-1-half avatar-pic"
-                                        alt="example placeholder avatar">
-                                </div>
-                                <label class="btn btn-primary" for="my-file-selector">
-                                    <input id="my-file-selector" type="file" class="d-none">
-                                    Añadir Imagen
-                                </label>
+                    <div class="col-12">
+                        <div class="file-field d-flex flex-column align-items-center mb-4">
+                            <div class="mb-4">
+                                <img src="./images/card2.jpg" class="rounded-circle z-depth-1-half avatar-pic"
+                                    alt="example placeholder avatar">
                             </div>
-                            <div class="form-row">
-                                <div class="col-12 mb-3">
-                                    <label for="validationTooltip01">Nombre del juego</label>
-                                    <input type="text" class="form-control" id="validationTooltip01"
-                                        placeholder="ej. Uno" required>
-
+                            <label class="btn btn-primary" for="my-file-selector">
+                                <input id="my-file-selector" type="file" class="d-none">
+                                Añadir Imagen
+                            </label>
+                        </div>
+                    </div>
+                    <div class="modal-body row">
+                        <div class="col-6">
+                            <h2 style="font-weight: bold; text-align: center; font-size: x-large;">Características
+                                Basicas</h2>
+                            <form class="md-form" novalidate>
+                                <div class="form-row">
+                                    <div class="col-12 mb-3">
+                                        <label for="nameCard">Nombre de la carta</label>
+                                        <input type="text" class="form-control" id="nameCard" placeholder="ej. Uno"
+                                            required>
+                                    </div>
+                                    <div class="col-12 mb-3">
+                                        <label for="attackCard">Ataque</label>
+                                        <input type="number" min="0" class="form-control" id="attackCard"
+                                            placeholder="ej. 20" required>
+                                    </div>
+                                    <div class="col-12 mb-3">
+                                        <label for="defenseCard">Defensa</label>
+                                        <input type="number" min="0" class="form-control" id="defenseCard"
+                                            placeholder="ej. 20" required>
+                                    </div>
+                                    <div class="col-12 mb-3">
+                                        <label for="descriptionCard">Descripcion</label>
+                                        <textarea class="form-control" id="descriptionCard" placeholder="ej. Uno"
+                                            required></textarea>
+                                    </div>
                                 </div>
-                                <div class="col-12 mb-3">
-                                    <label for="validationTooltip02">Numero de Cartas</label>
-                                    <input type="number" min="1" class="form-control" id="validationTooltip02"
-                                        placeholder="0" value="Otto" required>
 
+                            </form>
+                        </div>
+                        <div class="col-6">
+                            <h2 style="font-weight: bold; text-align: center;font-size: x-large;">Características
+                                Especiales</h2>
+                            <form class="md-form" novalidate>
+                                <div class="form-row">
+                                    <div class="col-12 mb-3">
+                                        <label for="healingCard">Recuperación</label>
+                                        <input type="number" min="0" class="form-control" id="healingCard"
+                                            placeholder="ej. 20">
+                                    </div>
+                                    <div class="col-12 mb-3">
+                                        <label for="getLessDamageCard">Obtener menos daño</label>
+                                        <input type="number" min="0" class="form-control" id="getLessDamageCard"
+                                            placeholder="ej. 20">
+                                    </div>
+                                    <div class="col-12 mb-3">
+                                        <label for="attackAllEnemiesCard">Ataque a todos los enemigos</label>
+                                        <input type="number" min="0" class="form-control" id="attackAllEnemiesCard"
+                                            placeholder="ej. 20">
+                                    </div>
+                                    <div class="col-12 mb-3">
+                                        <label for="duplicateDamageLessDefenseCard">Duplicar daño menos defensa </label>
+                                        <input type="number" min="0" class="form-control"
+                                            id="duplicateDamageLessDefenseCard" placeholder="ej. Uno">
+                                    </div>
+                                    <div class="col-12 mb-3">
+                                        <label for="returnDamage">Devolver Daño </label>
+                                        <input type="checkbox" id="returnDamage">
+                                    </div>
+                                    <div class="col-12 mb-3">
+                                        <label for="returnDamage">Dividir Daño </label>
+                                        <input type="checkbox" id="returnDamage">
+                                    </div>
+                                    <div class="col-12 mb-3">
+                                        <label for="returnDamage">Invertir Atributos Basicos </label>
+                                        <input type="checkbox" id="returnDamage">
+                                    </div>
                                 </div>
-                            </div>
+                            </form>
+                        </div>
 
-                        </form>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-target="#editModal"
