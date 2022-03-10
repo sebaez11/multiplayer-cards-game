@@ -21,13 +21,24 @@ html {
   box-sizing: 0;
 }
 
-header {
+.header-principal {
   background-image: url('../images/header.png');
   min-height: 100vh;
   min-width: 100%;
   overflow: hidden;
   background-size: cover;
   background-position: top right;
+}
+
+.header-admin {
+  background-image: url('../images/admin.jpeg');
+  min-height: 100vh;
+  min-width: 100%;
+  overflow: hidden;
+  background-size: cover;
+  background-position: top right;
+  background-color: rgba(200, 192, 196, 0.3);
+  padding-bottom: 4rem;
 }
 
 nav {
@@ -51,14 +62,14 @@ nav .items-nav {
   color: var(--color-white) !important;
 }
 
-header .banner-container {
+.header-principal .banner-container {
   width: 60%;
   margin: 0 auto;
   margin-top: 60vh;
   line-height: 7rem;
 }
 
-header .banner-container .banner-text {
+.header-principal .banner-container .banner-text {
   font-size: var(--font-size-x-big) !important;
   font-family: var(--principal-family);
   text-align: center;
@@ -143,6 +154,14 @@ main {
   background-color: #2b2a29;
   font-family: var(--principal-family);
 }
+.games-admin-container {
+  width: 80%;
+  height: auto;
+  min-height: 80vh;
+  margin: 0 auto;
+  margin-top: 1rem;
+  padding-bottom: 4vh;
+}
 .games-cards {
   padding-left: 2.5vh;
 }
@@ -195,6 +214,28 @@ main {
   font-family: var(--principal-family);
   font-size: var(--font-size-small) !important;
 }
+.games-cards-admin {
+  overflow-y: auto !important;
+}
+.card-admin-list {
+  height: 22.4rem !important;
+}
+.games-admin-container-list {
+  width: 100%;
+  min-height: 0;
+}
+
+.games-admin-list {
+  width: 100%;
+  max-height: 50vh;
+}
+.games-cards .card-admin {
+  width: 95%;
+  height: 25rem;
+}
+.games-cards .card-admin .button-card {
+  margin-right: 0rem !important;
+}
 .games-cards .card-img-top {
   height: 80%;
   border-top-right-radius: 1rem;
@@ -209,6 +250,166 @@ main {
   font-size: var(--font-size-xx-small);
 }
 
+#createModal {
+  transform: translateY(25vh);
+}
+
+#createModal .modal-dialog {
+  width: 25vw !important;
+  height: auto !important;
+  max-width: 80vw !important;
+  font-size: var(--font-size-xx-small) !important;
+  font-family: var(--principal-family);
+}
+#createModal .modal-dialog .modal-content {
+  font-size: var(--font-size-xx-small) !important;
+  padding: 1rem;
+}
+
+#createModal .modal-dialog .modal-title {
+  font-size: var(--font-size-medium) !important;
+}
+#createModal .modal-dialog .btn,
+#createModal .modal-dialog .form-control {
+  font-size: var(--font-size-xx-small) !important;
+}
+
+#createCard {
+  transform: translateY(25vh);
+}
+
+#createCard .modal-dialog {
+  width: 25vw !important;
+  height: auto !important;
+  max-width: 80vw !important;
+  font-size: var(--font-size-xx-small) !important;
+  font-family: var(--principal-family);
+}
+#createCard .modal-dialog .modal-content {
+  font-size: var(--font-size-xx-small) !important;
+  padding: 1rem;
+}
+
+#createCard .modal-dialog .modal-title {
+  font-size: var(--font-size-medium) !important;
+}
+#createCard .modal-dialog .btn,
+#createCard .modal-dialog .form-control {
+  font-size: var(--font-size-xx-small) !important;
+}
+
+#editModal {
+  transform: translateY(0vh);
+}
+
+#editModal .modal-dialog {
+  width: auto !important;
+  height: auto !important;
+  min-width: 80vw !important;
+  font-size: var(--font-size-xx-small) !important;
+  font-family: var(--principal-family);
+}
+#editModal .modal-dialog .modal-content {
+  font-size: var(--font-size-xx-small) !important;
+  padding: 1rem;
+}
+
+#editModal .modal-dialog .modal-title {
+  font-size: var(--font-size-medium) !important;
+}
+#editModal .modal-dialog .btn,
+#editModal .modal-dialog .form-control {
+  font-size: var(--font-size-xx-small) !important;
+}
+
+#editCard {
+  transform: translateY(0vh);
+}
+
+#editCard .modal-dialog {
+  width: auto !important;
+  height: auto !important;
+  min-width: 80vw !important;
+  font-size: var(--font-size-xx-small) !important;
+  font-family: var(--principal-family);
+}
+#editCard .modal-dialog .modal-content {
+  font-size: var(--font-size-xx-small) !important;
+  padding: 1rem;
+}
+
+#editCard .modal-dialog .modal-title {
+  font-size: var(--font-size-medium) !important;
+}
+#editCard .modal-dialog .btn,
+#editCard .modal-dialog .form-control {
+  font-size: var(--font-size-xx-small) !important;
+}
+
+#deleteModal {
+  transform: translateY(25vh);
+}
+
+#deleteModal .modal-dialog {
+  width: 25vw !important;
+  height: auto !important;
+  max-width: 80vw !important;
+  font-size: var(--font-size-xx-small) !important;
+  font-family: var(--principal-family);
+}
+#deleteModal .modal-dialog .modal-content {
+  font-size: var(--font-size-xx-small) !important;
+  padding: 1rem;
+}
+
+#deleteModal .modal-dialog .modal-title {
+  font-size: var(--font-size-medium) !important;
+}
+#deleteModal .modal-dialog .btn,
+#deleteModal .modal-dialog .form-control {
+  font-size: var(--font-size-xx-small) !important;
+}
+
+#deleteCard {
+  transform: translateY(0vh);
+}
+
+#deleteCard .modal-dialog {
+  width: 25vw !important;
+  height: auto !important;
+  max-width: 80vw !important;
+  font-size: var(--font-size-xx-small) !important;
+  font-family: var(--principal-family);
+}
+#deleteCard .modal-dialog .modal-content {
+  font-size: var(--font-size-xx-small) !important;
+  padding: 1rem;
+}
+
+#deleteCard .modal-dialog .modal-title {
+  font-size: var(--font-size-medium) !important;
+}
+#deleteCard .modal-dialog .btn,
+#deleteCard .modal-dialog .form-control {
+  font-size: var(--font-size-xx-small) !important;
+}
+
+.form-edit-game {
+  width: 50%;
+  margin: 0 auto;
+}
+.avatar-pic {
+  width: 150px;
+  height: 130px;
+}
+#formFile::before {
+  content: 'Pick file';
+  position: absolute;
+  z-index: 2;
+  display: block;
+  background-color: #eee;
+  width: 80px;
+}
 footer {
   background-color: var(--color-black);
   color: var(--color-white);
