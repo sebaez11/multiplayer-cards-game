@@ -1,0 +1,458 @@
+:root {
+  --principal-family: 'Indie Flower', cursive;
+  --secondary-family: 'Sansita Swashed', cursive;
+  --font-size-xxx-small: 1.5rem;
+  --font-size-xx-small: 2rem;
+  --font-size-small: 3.5rem;
+  --font-size-x-small: 2.5rem;
+  --font-size-x-medium: 5.5rem;
+  --font-size-medium: 4.5rem;
+  --font-size-big: 6rem;
+  --font-size-x-big: 7.5rem;
+  --color-white: white;
+  --color-black: black;
+}
+html {
+  font-size: 62.5%;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+}
+
+.header-principal {
+  background-image: url('../images/header.png');
+  min-height: 100vh;
+  min-width: 100%;
+  overflow: hidden;
+  background-size: cover;
+  background-position: top right;
+}
+
+.header-admin {
+  background-image: url('../images/admin.jpeg');
+  min-height: 100vh;
+  min-width: 100%;
+  overflow: hidden;
+  background-size: cover;
+  background-position: top right;
+  background-color: rgba(200, 192, 196, 0.3);
+  padding-bottom: 4rem;
+}
+
+nav {
+  background-color: rgba(200, 192, 196, 0) !important;
+  color: white;
+  font-family: var(--principal-family);
+  padding: 0 1rem;
+}
+
+nav #brand img {
+  width: 50px;
+}
+
+nav #logo-title {
+  font-size: var(--font-size-small) !important;
+  color: var(--color-white) !important;
+}
+
+nav .items-nav {
+  font-size: var(--font-size-x-small) !important;
+  color: var(--color-white) !important;
+}
+
+.header-principal .banner-container {
+  width: 60%;
+  margin: 0 auto;
+  margin-top: 60vh;
+  line-height: 7rem;
+}
+
+.header-principal .banner-container .banner-text {
+  font-size: var(--font-size-x-big) !important;
+  font-family: var(--principal-family);
+  text-align: center;
+  text-shadow: 6px 6px 9px rgba(150, 150, 150, 1);
+  color: var(--color-white) !important;
+}
+
+main {
+  background-image: url('../images/wall.jpg');
+  overflow: hidden;
+  background-size: cover;
+  background-position: top right;
+}
+
+.layer {
+  width: 100vw;
+  position: absolute;
+  background-color: rgba(200, 192, 196, 0.5) !important;
+}
+
+.info-container {
+  margin: 15vh 0;
+  background-color: var(--color-white);
+  height: 70vh;
+  display: flex;
+}
+.info-container .banner-image {
+  flex: 1.4;
+  display: inline-block;
+  height: 100%;
+  background-image: url('../images/banner1.jpg');
+  overflow: hidden;
+  background-size: cover;
+  background-position: top right;
+  -webkit-clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 0% 100%);
+  clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+.info-container .banner-text-container {
+  flex: 1;
+  display: inline-block;
+  color: var(--color-black);
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.info-container .banner-text-container .banner-text-title {
+  font-size: var(--font-size-x-medium) !important;
+  color: var(--color-black) !important;
+  font-family: var(--principal-family);
+  line-height: 5rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  padding: 2rem 0;
+}
+
+.rules-container {
+  height: 100vh;
+  padding-top: 5vh 0;
+  padding-bottom: 5vh;
+  background-color: rgb(242, 242, 242);
+}
+
+.carousel-container {
+  height: 75vh !important;
+}
+.carousel-inner {
+  height: 100%;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+}
+
+.games-container {
+  height: 100%;
+  padding: 0 3rem;
+  padding-top: 5vh 0;
+  padding-bottom: 10vh;
+  background-color: #2b2a29;
+  font-family: var(--principal-family);
+}
+.games-admin-container {
+  width: 80%;
+  height: auto;
+  min-height: 80vh;
+  margin: 0 auto;
+  margin-top: 1rem;
+  padding-bottom: 4vh;
+}
+.games-cards {
+  padding-left: 2.5vh;
+}
+.title-section {
+  font-size: var(--font-size-medium);
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+  padding-left: 2.5vh;
+  font-weight: bold;
+  font-family: var(--principal-family);
+}
+
+.color-white {
+  color: var(--color-white);
+}
+.color-black {
+  color: var(--color-black);
+}
+
+/* Slice */
+
+.content {
+  margin: 0 auto;
+  display: flex;
+}
+
+/* Bootstrap modifications */
+.carousel-indicators [data-bs-target] {
+  width: 10px !important;
+  height: 10px !important;
+  border-radius: 50%;
+}
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+  width: 4rem !important;
+  height: 4rem !important;
+}
+
+/*  Cards */
+
+.games-cards .card {
+  background: #222;
+  border: 1px solid #dd2476;
+  color: rgba(250, 250, 250, 0.8);
+  margin-bottom: 2rem;
+  height: 30rem;
+  width: 95%;
+  padding: 0;
+  border-radius: 1rem;
+  font-family: var(--principal-family);
+  font-size: var(--font-size-small) !important;
+}
+.games-cards-admin {
+  overflow-y: auto !important;
+}
+.card-admin-list {
+  height: 22.4rem !important;
+}
+.games-admin-container-list {
+  width: 100%;
+  min-height: 0;
+}
+
+.games-admin-list {
+  width: 100%;
+  max-height: 50vh;
+}
+.games-cards .card-admin {
+  width: 95%;
+  height: 25rem;
+}
+.games-cards .card-admin .button-card {
+  margin-right: 0rem !important;
+}
+.games-cards .card-img-top {
+  height: 80%;
+  border-top-right-radius: 1rem;
+  border-top-left-radius: 1rem;
+}
+.games-cards .card .button-card {
+  margin-right: 1rem;
+  font-size: var(--font-size-xxx-small);
+}
+.games-cards .card-title {
+  font-weight: bold;
+  font-size: var(--font-size-xx-small);
+}
+
+#createModal {
+  transform: translateY(25vh);
+}
+
+#createModal .modal-dialog {
+  width: 25vw !important;
+  height: auto !important;
+  max-width: 80vw !important;
+  font-size: var(--font-size-xx-small) !important;
+  font-family: var(--principal-family);
+}
+#createModal .modal-dialog .modal-content {
+  font-size: var(--font-size-xx-small) !important;
+  padding: 1rem;
+}
+
+#createModal .modal-dialog .modal-title {
+  font-size: var(--font-size-medium) !important;
+}
+#createModal .modal-dialog .btn,
+#createModal .modal-dialog .form-control {
+  font-size: var(--font-size-xx-small) !important;
+}
+
+#createCard {
+  transform: translateY(0vh);
+}
+
+#createCard .modal-dialog {
+  width: auto !important;
+  height: auto !important;
+  min-width: 50vw !important;
+  font-size: var(--font-size-xx-small) !important;
+  font-family: var(--principal-family);
+}
+#createCard .modal-dialog .modal-content {
+  font-size: var(--font-size-xx-small) !important;
+  padding: 1rem;
+}
+
+#createCard .modal-dialog .modal-title {
+  font-size: var(--font-size-medium) !important;
+}
+#createCard .modal-dialog .btn,
+#createCard .modal-dialog .form-control {
+  font-size: var(--font-size-xx-small) !important;
+}
+
+#editModal {
+  transform: translateY(0vh);
+}
+
+#editModal .modal-dialog {
+  width: auto !important;
+  height: auto !important;
+  min-width: 80vw !important;
+  font-size: var(--font-size-xx-small) !important;
+  font-family: var(--principal-family);
+}
+#editModal .modal-dialog .modal-content {
+  font-size: var(--font-size-xx-small) !important;
+  padding: 1rem;
+}
+
+#editModal .modal-dialog .modal-title {
+  font-size: var(--font-size-medium) !important;
+}
+#editModal .modal-dialog .btn,
+#editModal .modal-dialog .form-control {
+  font-size: var(--font-size-xx-small) !important;
+}
+#editModal .card-body .button-card {
+  font-size: var(--font-size-xx-small) !important;
+}
+#editCard {
+  transform: translateY(0vh);
+}
+
+#editCard .modal-dialog {
+  width: auto !important;
+  height: auto !important;
+  min-width: 50vw !important;
+  font-size: var(--font-size-xx-small) !important;
+  font-family: var(--principal-family);
+}
+#editCard .modal-dialog .modal-content {
+  font-size: var(--font-size-xx-small) !important;
+  padding: 1rem;
+}
+
+#editCard .modal-dialog .modal-title {
+  font-size: var(--font-size-medium) !important;
+}
+#editCard .modal-dialog .btn,
+#editCard .modal-dialog .form-control {
+  font-size: var(--font-size-xx-small) !important;
+}
+#editCard .card-body .button-card {
+  font-size: var(--font-size-xxx-small) !important;
+}
+#list-cards-admin .card-admin-list .card-body .button-card {
+  font-size: var(--font-size-xxx-small) !important;
+}
+#deleteModal {
+  transform: translateY(25vh);
+}
+
+#deleteModal .modal-dialog {
+  width: 25vw !important;
+  height: auto !important;
+  max-width: 80vw !important;
+  font-size: var(--font-size-xx-small) !important;
+  font-family: var(--principal-family);
+}
+#deleteModal .modal-dialog .modal-content {
+  font-size: var(--font-size-xx-small) !important;
+  padding: 1rem;
+}
+
+#deleteModal .modal-dialog .modal-title {
+  font-size: var(--font-size-medium) !important;
+}
+#deleteModal .modal-dialog .btn,
+#deleteModal .modal-dialog .form-control {
+  font-size: var(--font-size-xx-small) !important;
+}
+
+#deleteCard {
+  transform: translateY(0vh);
+}
+
+#deleteCard .modal-dialog {
+  width: 25vw !important;
+  height: auto !important;
+  max-width: 80vw !important;
+  font-size: var(--font-size-xx-small) !important;
+  font-family: var(--principal-family);
+}
+#deleteCard .modal-dialog .modal-content {
+  font-size: var(--font-size-xx-small) !important;
+  padding: 1rem;
+}
+
+#deleteCard .modal-dialog .modal-title {
+  font-size: var(--font-size-medium) !important;
+}
+#deleteCard .modal-dialog .btn,
+#deleteCard .modal-dialog .form-control {
+  font-size: var(--font-size-xx-small) !important;
+}
+
+.form-edit-game {
+  width: 50%;
+  margin: 0 auto;
+}
+.avatar-pic {
+  width: 150px;
+  height: 130px;
+}
+#formFile::before {
+  content: 'Pick file';
+  position: absolute;
+  z-index: 2;
+  display: block;
+  background-color: #eee;
+  width: 80px;
+}
+footer {
+  background-color: var(--color-black);
+  color: var(--color-white);
+  font-size: var(--font-size-x-small);
+  font-family: var(--principal-family);
+  padding: 2.5vh;
+}
+
+footer .copyrigth {
+  font-size: var(--font-size-xx-small) !important;
+}
+/* Arrow & Hover Animation */
+#more-arrows {
+  width: 75px;
+  height: 65px;
+  margin: 0 auto;
+  margin-top: 3.5rem;
+  cursor: pointer;
+}
+#more-arrows:hover polygon {
+  fill: #fff;
+  transition: all 0.2s ease-out;
+}
+#more-arrows:hover polygon.arrow-bottom {
+  transform: translateY(-18px);
+}
+#more-arrows:hover polygon.arrow-top {
+  transform: translateY(18px);
+}
+polygon {
+  fill: #fff;
+  transition: all 0.2s ease-out;
+}
+polygon.arrow-middle {
+  opacity: 0.75;
+}
+polygon.arrow-top {
+  opacity: 0.5;
+}
