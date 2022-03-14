@@ -34,8 +34,6 @@ public class UserQueries {
             if(resultSet > 0){
                 user_created = true;
             }
-            
-            
         }catch (SQLException ex) {
             Logger.getLogger(User.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -87,7 +85,31 @@ public class UserQueries {
         }
         
         return false;
-
+ 
     }
+    
+    public boolean validPassword(String username, String password){
+        
+        PreparedStatement pstatement = null;
+        ResultSet resultSet = null;
+        String sql = "SELECT * FROM users WHERE username='" + username + "'AND password='"+password+"'";
+        
+        try {
+            Connection conn = Database.getConection();
+            pstatement = conn.prepareStatement(sql);
+            resultSet = pstatement.executeQuery();
+            
+            if(resultSet != null){
+                return resultSet.next();
+            }
+            
+        }catch (SQLException ex) {
+            Logger.getLogger(User.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        return false;
+        
+    }
+    
     
 }

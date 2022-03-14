@@ -23,7 +23,7 @@ public class Database {
         String ip = "localhost";
         String basedatos = "playcards_DB";
         String usuario = "postgres";
-        String pass = "postgres";
+        String pass = "Puerto1*";
         String puerto = "5432";
         String url = "jdbc:postgresql://" + ip + ":" + puerto + "/" + basedatos + "?serverTimezone=UTC&autoReconnect=true&useSSL=false";
 

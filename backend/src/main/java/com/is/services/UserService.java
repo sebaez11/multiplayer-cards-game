@@ -55,4 +55,28 @@ public class UserService {
         
     }
     
+    public String LoginService(String obj){
+        UtilsMethods utils = new UtilsMethods();
+        User user = utils.jsonToUser(obj);
+        UserResponse userResponse = new UserResponse();
+        
+        //boolean userExistsByEmail = userq.existsByEmail(user.getEmail());
+        boolean userExistsByUsername = userq.existsByUsername(user.getUsername());
+        boolean validPassword = userq.validPassword(user.getUsername(), user.getPassword());
+        
+        if(userExistsByUsername){
+            if(validPassword){
+                        utils.responseOk(userResponse);
+                        userResponse.setUser(user);
+                }else{
+                    utils.responseIncorrectPassword(userResponse);
+                }
+            }else {
+                utils.responseUserNotFound(userResponse);
+            }
+        
+        return utils.convertToJson(userResponse);
+       
+    }
+    
 }

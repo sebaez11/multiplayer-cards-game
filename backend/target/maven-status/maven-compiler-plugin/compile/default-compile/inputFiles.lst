@@ -1,14 +1,15 @@
-/home/sebastian-dev/Desktop/PROYECTO IS/multiplayer-cards-game/backend/src/main/java/com/is/database/repositories/CardSetQueries.java
-/home/sebastian-dev/Desktop/PROYECTO IS/multiplayer-cards-game/backend/src/main/java/com/is/models/card_set.java
-/home/sebastian-dev/Desktop/PROYECTO IS/multiplayer-cards-game/backend/src/main/java/com/is/services/UserService.java
-/home/sebastian-dev/Desktop/PROYECTO IS/multiplayer-cards-game/backend/src/main/java/com/is/database/repositories/UserQueries.java
-/home/sebastian-dev/Desktop/PROYECTO IS/multiplayer-cards-game/backend/src/main/java/com/is/utils/users/UtilsMethods.java
-/home/sebastian-dev/Desktop/PROYECTO IS/multiplayer-cards-game/backend/src/main/java/com/is/database/repositories/CardQueries.java
-/home/sebastian-dev/Desktop/PROYECTO IS/multiplayer-cards-game/backend/src/main/java/com/is/controllers/users/SignupController.java
-/home/sebastian-dev/Desktop/PROYECTO IS/multiplayer-cards-game/backend/src/main/java/com/is/models/response/UserResponse.java
-/home/sebastian-dev/Desktop/PROYECTO IS/multiplayer-cards-game/backend/src/main/java/com/is/database/Database.java
-/home/sebastian-dev/Desktop/PROYECTO IS/multiplayer-cards-game/backend/src/main/java/com/is/utils/Constants.java
-/home/sebastian-dev/Desktop/PROYECTO IS/multiplayer-cards-game/backend/src/main/java/com/is/models/Card.java
-/home/sebastian-dev/Desktop/PROYECTO IS/multiplayer-cards-game/backend/src/main/java/com/is/models/User.java
-/home/sebastian-dev/Desktop/PROYECTO IS/multiplayer-cards-game/backend/src/main/java/com/is/models/Role.java
-/home/sebastian-dev/Desktop/PROYECTO IS/multiplayer-cards-game/backend/src/main/java/com/is/utils/Status.java
+C:\Users\drago\Desktop\Proyecto_is\multiplayer-cards-game\backend\src\main\java\com\is\database\repositories\UserQueries.java
+C:\Users\drago\Desktop\Proyecto_is\multiplayer-cards-game\backend\src\main\java\com\is\utils\Constants.java
+C:\Users\drago\Desktop\Proyecto_is\multiplayer-cards-game\backend\src\main\java\com\is\database\Database.java
+C:\Users\drago\Desktop\Proyecto_is\multiplayer-cards-game\backend\src\main\java\com\is\utils\users\UtilsMethods.java
+C:\Users\drago\Desktop\Proyecto_is\multiplayer-cards-game\backend\src\main\java\com\is\database\repositories\CardQueries.java
+C:\Users\drago\Desktop\Proyecto_is\multiplayer-cards-game\backend\src\main\java\com\is\controllers\users\SignupController.java
+C:\Users\drago\Desktop\Proyecto_is\multiplayer-cards-game\backend\src\main\java\com\is\database\repositories\CardSetQueries.java
+C:\Users\drago\Desktop\Proyecto_is\multiplayer-cards-game\backend\src\main\java\com\is\controllers\users\LoginController.java
+C:\Users\drago\Desktop\Proyecto_is\multiplayer-cards-game\backend\src\main\java\com\is\utils\Status.java
+C:\Users\drago\Desktop\Proyecto_is\multiplayer-cards-game\backend\src\main\java\com\is\services\UserService.java
+C:\Users\drago\Desktop\Proyecto_is\multiplayer-cards-game\backend\src\main\java\com\is\models\card_set.java
+C:\Users\drago\Desktop\Proyecto_is\multiplayer-cards-game\backend\src\main\java\com\is\models\User.java
+C:\Users\drago\Desktop\Proyecto_is\multiplayer-cards-game\backend\src\main\java\com\is\models\Card.java
+C:\Users\drago\Desktop\Proyecto_is\multiplayer-cards-game\backend\src\main\java\com\is\models\response\UserResponse.java
+C:\Users\drago\Desktop\Proyecto_is\multiplayer-cards-game\backend\src\main\java\com\is\models\Role.java
