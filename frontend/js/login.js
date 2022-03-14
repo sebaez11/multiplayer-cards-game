@@ -65,7 +65,7 @@ inputs.forEach((input) => {
   input.addEventListener('blur', validarFormulario);
 });
 
-formulario.addEventListener('submit', (e) => {
+formulario.addEventListener('submit', async (e) => {
   e.preventDefault();
 
   if (campos.usuario && campos.password) {
@@ -85,6 +85,18 @@ formulario.addEventListener('submit', (e) => {
       .forEach((icono) => {
         icono.classList.remove('formulario__grupo-correcto');
       });
+    try {
+      const data = {
+        username: document.getElementById('usuario'),
+        password: document.getElementById('password'),
+      };
+      const responseLogin = await fetch('', {
+        method: 'POST',
+        data,
+      });
+    } catch (error) {
+      console.log(error);
+    }
   } else {
     document
       .getElementById('formulario__mensaje')

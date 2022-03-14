@@ -115,12 +115,9 @@ inputs.forEach((input) => {
   input.addEventListener('blur', validarFormulario);
 });
 
-form_registro.addEventListener('submit', (e) => {
+form_registro.addEventListener('submit', async (e) => {
   e.preventDefault();
-
   if (campos.usuario && campos.password && campos.correo) {
-    form_registro.reset();
-
     document
       .getElementById('formulario__mensaje-exito')
       .classList.add('formulario__mensaje-exito-activo');
@@ -135,6 +132,20 @@ form_registro.addEventListener('submit', (e) => {
       .forEach((icono) => {
         icono.classList.remove('formulario__grupo-correcto');
       });
+    form_registro.reset();
+    try {
+      const data = {
+        username: document.getElementById('usuario'),
+        email: document.getElementById('email'),
+        password: document.getElementById('password'),
+      };
+      const responseRegister = await fetch('', {
+        method: 'POST',
+        data,
+      });
+    } catch (error) {
+      console.log(error);
+    }
   } else {
     document
       .getElementById('formulario__mensaje')
