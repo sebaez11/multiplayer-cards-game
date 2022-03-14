@@ -25,7 +25,7 @@ public class Database {
         String usuario = "postgres";
         String pass = "postgres";
         String puerto = "5432";
-        String url = "jdbc:postgresql://" + ip + ":" + puerto + "/" + basedatos;
+        String url = "jdbc:postgresql://" + ip + ":" + puerto + "/" + basedatos + "?serverTimezone=UTC&autoReconnect=true&useSSL=false";
 
         try {
             if (Database.connection == null) {

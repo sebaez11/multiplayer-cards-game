@@ -6,7 +6,7 @@ package com.is.models;
 
 public class User {
     int id,role_id;
-    String username, email, password;
+    String username, email, password, password_confirmation;
     
     public User(){
         this.id = 0;
@@ -14,14 +14,16 @@ public class User {
         this.username = "";
         this.email = "";
         this.password = "";
+        this.password_confirmation = "";
     }
 
-    public User(int id, int role_id, String username, String email, String password) {
+    public User(int id, int role_id, String username, String email, String password, String password_confirmation) {
         this.id = id;
         this.role_id = role_id;
         this.username = username;
         this.email = email;
         this.password = password;
+        this.password_confirmation = password_confirmation;
     }
 
     public void setId(int id) {
@@ -62,6 +64,14 @@ public class User {
 
     public String getPassword() {
         return password;
+    }
+
+    public String getPassword_confirmation() {
+        return password_confirmation;
+    }
+
+    public void setPassword_confirmation(String password_confirmation) {
+        this.password_confirmation = password_confirmation;
     }
    
 }

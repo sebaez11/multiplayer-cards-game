@@ -40,6 +40,12 @@ public class UtilsMethods {
 	userResponse.getStatus().setSeverity(Constants.SEVERITY_ERROR);
     }
     
+    public void responseInvalidPassword(UserResponse userResponse){
+        userResponse.getStatus().setStatusCode(400);
+	userResponse.getStatus().setStatusDescription(Constants.INVALID_PASSWORD_MESSAGE);
+	userResponse.getStatus().setSeverity(Constants.SEVERITY_ERROR);
+    }
+    
     public void responseUserNotFound(UserResponse userResponse) {
 	userResponse.getStatus().setStatusCode(400);
 	userResponse.getStatus().setStatusDescription(Constants.USER_NOT_FOUND_MESSAGE);
@@ -61,12 +67,12 @@ public class UtilsMethods {
         return user;
     }
     
-    public String convertToJson(UserResponse userResponse){
+    public String convertToJson(User user){
         GsonBuilder builder = new GsonBuilder();
         builder.setPrettyPrinting();
         Gson gson = builder.create();
         
-        return gson.toJson(userResponse);
+        return gson.toJson(user);
     }
     
 }

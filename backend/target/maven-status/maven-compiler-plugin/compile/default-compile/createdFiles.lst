@@ -1,12 +1,15 @@
 com/is/utils/Constants.class
+com/is/models/Card.class
+com/is/database/repositories/CardQueries.class
+com/is/models/card_set.class
+Main.class
 com/is/models/User.class
 com/is/models/response/UserResponse.class
 com/is/utils/Status.class
-com/is/models/Card.class
 com/is/utils/users/UtilsMethods.class
 com/is/models/Role.class
 com/is/controllers/users/SignupController.class
 com/is/database/repositories/UserQueries.class
 com/is/database/Database.class
-com/is/models/card_set.class
 com/is/services/UserService.class
+com/is/database/repositories/CardSetQueries.class

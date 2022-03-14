@@ -4,7 +4,6 @@
  */
 package com.is.services;
 
-import com.google.gson.Gson;
 import com.is.database.repositories.UserQueries;
 import com.is.models.User;
 import com.is.models.response.UserResponse;
@@ -20,6 +19,7 @@ public class UserService {
     
     public String Signup(String obj){
         
+        
         UtilsMethods utils = new UtilsMethods();
         User user = utils.jsonToUser(obj);
         UserResponse userResponse = new UserResponse();
@@ -27,11 +27,12 @@ public class UserService {
         boolean userExistsByEmail = userq.existsByEmail(user.getEmail());
         boolean userExistsByUsername = userq.existsByUsername(user.getUsername());
         
-        if(!userExistsByEmail){
+        /*if(!userExistsByEmail){
             if(!userExistsByUsername){
                 try {
                         user.setRole_id(1);
                         userq.create(user.getUsername(), user.getEmail(), user.getPassword());
+                        userResponse.setUser(user);
                 }catch(Exception e){
                     utils.responseInternalServerError(userResponse);
                 }
@@ -41,11 +42,11 @@ public class UserService {
             
         }else {
             utils.responseInvalidEmail(userResponse);
-        }
+        }*/
         
         
         
-        return utils.convertToJson(userResponse);
+        return utils.convertToJson(user);
         
     }
     
