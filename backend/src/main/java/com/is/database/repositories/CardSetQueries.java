@@ -26,7 +26,6 @@ public class CardSetQueries {
         String sql = "INSERT INTO card_set (total_cards, image, name) VALUES('" + total_cards + "','" + image + "','" + name + "')";
         
         card_set Card_set = new card_set();
-        
         try {
             Connection conn = Database.getConection();
             pstatement = conn.prepareStatement(sql);
