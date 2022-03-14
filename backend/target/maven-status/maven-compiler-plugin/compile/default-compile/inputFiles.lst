@@ -3,7 +3,6 @@
 /home/sebastian-dev/Desktop/PROYECTO IS/multiplayer-cards-game/backend/src/main/java/com/is/services/UserService.java
 /home/sebastian-dev/Desktop/PROYECTO IS/multiplayer-cards-game/backend/src/main/java/com/is/database/repositories/UserQueries.java
 /home/sebastian-dev/Desktop/PROYECTO IS/multiplayer-cards-game/backend/src/main/java/com/is/utils/users/UtilsMethods.java
-/home/sebastian-dev/Desktop/PROYECTO IS/multiplayer-cards-game/backend/src/main/java/Main.java
 /home/sebastian-dev/Desktop/PROYECTO IS/multiplayer-cards-game/backend/src/main/java/com/is/database/repositories/CardQueries.java
 /home/sebastian-dev/Desktop/PROYECTO IS/multiplayer-cards-game/backend/src/main/java/com/is/controllers/users/SignupController.java
 /home/sebastian-dev/Desktop/PROYECTO IS/multiplayer-cards-game/backend/src/main/java/com/is/models/response/UserResponse.java

@@ -67,12 +67,12 @@ public class UtilsMethods {
         return user;
     }
     
-    public String convertToJson(User user){
+    public String convertToJson(UserResponse userResponse){
         GsonBuilder builder = new GsonBuilder();
         builder.setPrettyPrinting();
         Gson gson = builder.create();
         
-        return gson.toJson(user);
+        return gson.toJson(userResponse);
     }
     
 }

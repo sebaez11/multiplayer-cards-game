@@ -2,7 +2,6 @@ com/is/utils/Constants.class
 com/is/models/Card.class
 com/is/database/repositories/CardQueries.class
 com/is/models/card_set.class
-Main.class
 com/is/models/User.class
 com/is/models/response/UserResponse.class
 com/is/utils/Status.class

@@ -27,14 +27,19 @@ public class UserService {
         boolean userExistsByEmail = userq.existsByEmail(user.getEmail());
         boolean userExistsByUsername = userq.existsByUsername(user.getUsername());
         
-        /*if(!userExistsByEmail){
+        if(!userExistsByEmail){
             if(!userExistsByUsername){
-                try {
+                if(user.getPassword().equals(user.getPassword_confirmation())){
+                    try {
                         user.setRole_id(1);
                         userq.create(user.getUsername(), user.getEmail(), user.getPassword());
                         userResponse.setUser(user);
-                }catch(Exception e){
-                    utils.responseInternalServerError(userResponse);
+                        utils.responseOk(userResponse);
+                    }catch(Exception e){
+                        utils.responseInternalServerError(userResponse);
+                    }
+                }else{
+                    utils.responseInvalidPassword(userResponse);
                 }
             }else {
                 utils.responseInvalidUsername(userResponse);
@@ -42,11 +47,11 @@ public class UserService {
             
         }else {
             utils.responseInvalidEmail(userResponse);
-        }*/
+        }
         
         
         
-        return utils.convertToJson(user);
+        return utils.convertToJson(userResponse);
         
     }
     

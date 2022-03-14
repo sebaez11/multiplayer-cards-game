@@ -57,7 +57,7 @@ public class UserQueries {
             resultSet = pstatement.executeQuery();
             
             if(resultSet != null){
-                return true;
+                return resultSet.next();
             }
             
         }catch (SQLException ex) {
@@ -78,9 +78,8 @@ public class UserQueries {
             Connection conn = Database.getConection();
             pstatement = conn.prepareStatement(sql);
             resultSet = pstatement.executeQuery();
-            
             if(resultSet != null){
-                return true;
+                return resultSet.next();
             }
             
         }catch (SQLException ex) {
