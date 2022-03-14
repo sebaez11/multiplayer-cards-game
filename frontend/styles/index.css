@@ -350,7 +350,7 @@ main {
 #editCard .card-body .button-card {
   font-size: var(--font-size-xxx-small) !important;
 }
-#list-games-admin .card-admin-list .card-body .button-card {
+#list-cards-admin .card-admin-list .card-body .button-card {
   font-size: var(--font-size-xxx-small) !important;
 }
 #deleteModal {
