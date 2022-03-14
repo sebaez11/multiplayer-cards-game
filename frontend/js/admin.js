@@ -10,6 +10,7 @@ const buttonCreateGameModal = document.getElementById(
 );
 
 buttonCreateGameModal.addEventListener('click', () => {
+  formCreateGame.reset();
   infoGameCreate.classList.add('d-none');
 });
 createGameButton.addEventListener('click', createGame);
@@ -40,6 +41,7 @@ async function createGame(evt) {
     infoGameCreate.classList.add('alert-success');
     infoGameCreate.textContent = 'Se ha creado el juego exitosamente';
     formCreateGame.reset();
+    await getListGamesAdmin(true);
   } catch (error) {
     infoGameCreate.classList.remove('d-none');
     infoGameCreate.classList.remove('alert-success');
@@ -49,7 +51,7 @@ async function createGame(evt) {
   }
 }
 
-async function getListGamesAdmin() {
+async function getListGamesAdmin(s) {
   const listGames = [
     {
       id: 1,
@@ -67,6 +69,7 @@ async function getListGamesAdmin() {
       image: 'http://127.0.0.1:5500/frontend/images/card2.jpg',
     },
   ];
+
   //   url = '';
   //   try {
   //     const listGamesResponse = await fetch(url, {
@@ -117,54 +120,25 @@ async function getListCardsAdmin() {
   listCardsAdmin.innerHTML = fragment;
 }
 
-function createTemplateCreateGameForm() {
-  return `
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Crear Juego</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="alert alert-success d-none mb-4" id="info-game-create" role="alert">
+async function deleteGame(id) {
+  let data = {
+    id,
+  };
+  //   url = '';
+  //   try {
+  //     const listCardsResponse = await fetch(url, {
+  //       method: 'DELETE',
+  //       data;
+  //     });
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  //   const listCards = listCardsResponse.json();
+}
 
-                        </div>
-                        <form class="md-form" id="form-create-game" novalidate>
-                            <div class="file-field d-flex flex-column align-items-center mb-4">
-                                <div class="mb-4">
-                                    <img src="./images/card2.jpg" class="rounded-circle z-depth-1-half avatar-pic"
-                                        alt="example placeholder avatar">
-                                </div>
-                                <label class="btn btn-primary" for="my-file-selector">
-                                    <input id="my-file-selector" type="file" class="d-none" name="image-game">
-                                    Añadir Imagen
-                                </label>
-                            </div>
-                            <div class="form-row">
-                                <div class="col-12 mb-3">
-                                    <label for="validationTooltip01">Nombre del juego</label>
-                                    <input type="text" class="form-control" id="validationTooltip01"
-                                        placeholder="ej. Uno" required name="game-name">
-
-                                </div>
-                                <div class="col-12 mb-3">
-                                    <label for="validationTooltip02">Numero de Cartas</label>
-                                    <input type="number" min="1" class="form-control" id="validationTooltip02"
-                                        placeholder="0" value="Otto" required name="number-cards">
-
-                                </div>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                                <button type="submit" class="btn btn-success" id="create-game-button">Crear</button>
-                            </div>
-                        </form>
-                    </div>
-
-                </div>
-            </div>
-  
-  `;
+async function updateDeleteModal(id, name) {
+  document.getElementById('name-game-delete').textContent = name;
+  await deleteGame(id);
 }
 
 function createTemplateListGamesAdmin({ name, id, image }) {
@@ -176,7 +150,7 @@ function createTemplateListGamesAdmin({ name, id, image }) {
                         <div>
                             <a href="#" onclick="getListCardsAdmin()" class="btn btn-primary button-card" data-bs-toggle="modal"
                                     data-bs-target="#editModal"><i class="fa fa-edit"></i></a>
-                            <a href="#" class="btn btn-danger button-card" data-bs-toggle="modal"
+                            <a href="#" onclick="updateDeleteModal('${id}','${name}')" class="btn btn-danger button-card" data-bs-toggle="modal"
                                     data-bs-target="#deleteModal"><i class="fa fa-trash" aria-hidden="true"></i>
                             </a>
                         </div>
@@ -197,7 +171,7 @@ function createTemplateListCardsAdmin({ name, id, image }) {
                           data-bs-target="#editCard"><i
                               class="fa fa-edit"></i></button>
                       <button class="btn btn-danger button-card"
-                          data-bs-target="#deleteCard" data-bs-toggle="modal"
+                          data-bs-target="#deleteCard"  data-bs-toggle="modal"
                           data-bs-dismiss="modal"><i class="fa fa-trash"
                               aria-hidden="true"></i>
                       </button>

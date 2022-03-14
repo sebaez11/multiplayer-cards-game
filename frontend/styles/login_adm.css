@@ -1,36 +1,30 @@
 :root {
   --principal-family: 'Indie Flower', cursive;
+  --secondary-family: 'Sansita Swashed', cursive;
+  --font-size-xxx-small: 1.5rem;
+  --font-size-xx-small: 2rem;
+  --font-size-small: 3.5rem;
+  --font-size-x-small: 2.5rem;
+  --font-size-x-medium: 5.5rem;
+  --font-size-medium: 4.5rem;
+  --font-size-big: 6rem;
+  --font-size-x-big: 7.5rem;
+  --color-white: white;
+  --color-black: black;
+}
+html {
+  font-size: 62.5%;
 }
 * {
   margin: 0;
   padding: 0;
   box-sizing: 0;
   font-size: 18px;
-  font-family: Indie Flower, cursive;
-}
-.card-header {
-   /* padding: 0.5rem 1rem;
-    margin-bottom: 0;
-    /* background-color: rgba(0,0,0,.03); */
-    border-bottom: 1px solid rgba(0,0,0,.125);
-}
-
-.card-footer {
-    padding: 0.5rem 1rem;
-    /* background-color: rgba(0,0,0,.03); */
-    border-top: 1px solid rgba(0,0,0,.125);
-}
-section {
-  background-image: url('../images/adm.jpeg');
-  min-height: 100vh;
-  min-width: 100%;
-  overflow: hidden;
-  background-size: cover;
-  background-position: top right;
+  font-family: 'Indie Flower', cursive;
 }
 
 nav {
-  background-color: rgba(200, 192, 196, 0.2) !important;
+  background-color: rgba(200, 192, 196, 0) !important;
   color: white;
   font-family: var(--principal-family);
   padding: 0 1rem;
@@ -41,16 +35,31 @@ nav #brand img {
 }
 
 nav #logo-title {
-  font-size: var(--font-size-x-medium) !important;
-  color: var(--color-white);
+  font-size: var(--font-size-small) !important;
+  color: var(--color-white) !important;
+}
+.card-header {
+  /* padding: 0.5rem 1rem;
+    margin-bottom: 0;
+    /* background-color: rgba(0,0,0,.03); */
+  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
 }
 
-nav .items-nav {
-  font-size: var(--font-size-medium) !important;
-  color: var(--color-white);
+.card-footer {
+  padding: 0.5rem 1rem;
+  /* background-color: rgba(0,0,0,.03); */
+  border-top: 1px solid rgba(0, 0, 0, 0.125);
+}
+section {
+  background-image: url('../images/adm.jpeg');
+  min-height: 100vh;
+  min-width: 100%;
+  overflow: hidden;
+  background-size: cover;
+  background-position: top right;
 }
 
-section #login{
+section #login {
   background-color: white;
 }
 
@@ -83,13 +92,13 @@ input::placeholder {
   height: 40px;
   line-height: 45px;
   padding: 0 40px 0 10px;
-  transition: .3s ease all;
+  transition: 0.3s ease all;
 }
 
 .formulario__input:focus {
-  border: 3px solid #0075FF;
+  border: 3px solid #0075ff;
   outline: none;
-  box-shadow: 3px 0px 30px rgba(163,163,163, 0.4);
+  box-shadow: 3px 0px 30px rgba(163, 163, 163, 0.4);
 }
 
 .formulario__input-error {
@@ -115,17 +124,17 @@ input::placeholder {
   margin-right: 10px;
 }
 
-.formulario__grupo-terminos, 
+.formulario__grupo-terminos,
 .formulario__mensaje,
 .formulario__grupo-btn-enviar {
   grid-column: span 2;
 }
 
 .formulario__mensaje {
-  font-size: 8px
+  font-size: 8px;
   height: 20px;
   line-height: 20px;
-  background: #F66060;
+  background: #f66060;
   padding: 0 15px;
   border-radius: 3px;
   display: none;
@@ -155,11 +164,11 @@ input::placeholder {
   border: none;
   border-radius: 3px;
   cursor: pointer;
-  transition: .1s ease all;
+  transition: 0.1s ease all;
 }
 
 .formulario__btn:hover {
-  box-shadow: 3px 0px 30px rgba(163,163,163, 1);
+  box-shadow: 3px 0px 30px rgba(163, 163, 163, 1);
 }
 
 .formulario__mensaje-exito {
@@ -189,22 +198,4 @@ input::placeholder {
 
 .formulario__grupo-incorrecto .formulario__input {
   border: 3px solid #bb2929;
-}
-
-
-/* ----- -----  Mediaqueries ----- ----- */
-@media screen and (max-width: 800px) {
-  .formulario {
-    grid-template-columns: 1fr;
-  }
-
-  .formulario__grupo-terminos, 
-  .formulario__mensaje,
-  .formulario__grupo-btn-enviar {
-    grid-column: 1;
-  }
-
-  .formulario__btn {
-    width: 100%;
-  }
 }
