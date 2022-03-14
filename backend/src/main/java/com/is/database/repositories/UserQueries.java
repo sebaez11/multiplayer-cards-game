@@ -19,14 +19,12 @@ import java.util.logging.Logger;
  */
 public class UserQueries {
     
-    public Boolean create(String username, String email, String password){
+    public boolean create(String username, String email, String password){
     
         PreparedStatement pstatement = null;
         int resultSet = 0;
-        Boolean user_created = false;
+        boolean user_created = false;
         String sql = "INSERT INTO users(role_id, username, email, password) VALUES(1,'" + username + "','" + email + "','" + password + "')";
-        
-        User user = new User();
         
         try {
             Connection conn = Database.getConection();
@@ -42,8 +40,54 @@ public class UserQueries {
             Logger.getLogger(User.class.getName()).log(Level.SEVERE, null, ex);
         }
         
-        return user_created;
+        return user_created;     
         
+    }
+    
+    
+    public boolean existsByEmail(String email){
+        
+        PreparedStatement pstatement = null;
+        ResultSet resultSet = null;
+        String sql = "SELECT * FROM users u WHERE u.email = '" + email + "'";
+        
+        try {
+            Connection conn = Database.getConection();
+            pstatement = conn.prepareStatement(sql);
+            resultSet = pstatement.executeQuery();
+            
+            if(resultSet != null){
+                return true;
+            }
+            
+        }catch (SQLException ex) {
+            Logger.getLogger(User.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        return false;
+        
+    }
+    
+    public boolean existsByUsername(String username){
+    
+        PreparedStatement pstatement = null;
+        ResultSet resultSet = null;
+        String sql = "SELECT * FROM users u WHERE u.username = '" + username + "'";
+        
+        try {
+            Connection conn = Database.getConection();
+            pstatement = conn.prepareStatement(sql);
+            resultSet = pstatement.executeQuery();
+            
+            if(resultSet != null){
+                return true;
+            }
+            
+        }catch (SQLException ex) {
+            Logger.getLogger(User.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        return false;
 
     }
     
