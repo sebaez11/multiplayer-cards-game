@@ -65,12 +65,10 @@ inputs.forEach((input) => {
   input.addEventListener('blur', validarFormulario);
 });
 
-formulario.addEventListener('submit', async (e) => {
+formlogin.addEventListener('submit', async (e) => {
   e.preventDefault();
 
   if (campos.usuario && campos.password) {
-    formlogin.reset();
-
     document
       .getElementById('formulario__mensaje-exito')
       .classList.add('formulario__mensaje-exito-activo');
@@ -87,16 +85,25 @@ formulario.addEventListener('submit', async (e) => {
       });
     try {
       const data = {
-        username: document.getElementById('usuario'),
-        password: document.getElementById('password'),
+        username: document.getElementById('usuario').value,
+        password: document.getElementById('password').value,
       };
-      const responseLogin = await fetch('', {
-        method: 'POST',
-        data,
-      });
+      console.log(data);
+      const responseLogin = await fetch(
+        'http://localhost:8080/backend/LoginController',
+        {
+          method: 'POST',
+          body: JSON.stringify(data),
+        }
+      );
+      const dataResponse = await responseLogin.json();
+      if (dataResponse.status.statusCode === 201) {
+        window.location.href = 'index.html';
+      }
     } catch (error) {
       console.log(error);
     }
+    formlogin.reset();
   } else {
     document
       .getElementById('formulario__mensaje')

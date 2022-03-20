@@ -132,20 +132,30 @@ form_registro.addEventListener('submit', async (e) => {
       .forEach((icono) => {
         icono.classList.remove('formulario__grupo-correcto');
       });
-    form_registro.reset();
     try {
       const data = {
-        username: document.getElementById('usuario'),
-        email: document.getElementById('email'),
-        password: document.getElementById('password'),
+        username: document.getElementById('usuario').value,
+        email: document.getElementById('correo').value,
+        password: document.getElementById('password').value,
+        password_confirmation: document.getElementById('password').value,
       };
-      const responseRegister = await fetch('', {
-        method: 'POST',
-        data,
-      });
+      const responseRegister = await fetch(
+        'http://localhost:8080/backend/Signup',
+        {
+          method: 'POST',
+          body: JSON.stringify(data),
+        }
+      );
+      const dataResponse = await responseRegister.json();
+
+      if (dataResponse.status.statusCode == 201) {
+        window.location.href = 'login.html';
+      }
     } catch (error) {
       console.log(error);
     }
+
+    form_registro.reset();
   } else {
     document
       .getElementById('formulario__mensaje')

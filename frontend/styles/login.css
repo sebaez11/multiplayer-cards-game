@@ -19,6 +19,7 @@ html {
   margin: 0;
   padding: 0;
   box-sizing: 0;
+  font-size: 18px;
   font-family: 'Indie Flower', cursive;
 }
 
@@ -37,7 +38,6 @@ nav #logo-title {
   font-size: var(--font-size-small) !important;
   color: var(--color-white) !important;
 }
-
 .card-header {
   /* padding: 0.5rem 1rem;
     margin-bottom: 0;
@@ -69,7 +69,6 @@ input::placeholder {
 }
 
 .formulario {
-  display: grid;
   grid-template-columns: 1fr 1fr;
 }
 
@@ -85,7 +84,7 @@ input::placeholder {
 }
 
 .formulario__input {
-  width: 260px;
+  width: 100%;
   background: #fff;
   border: 3px solid transparent;
   border-radius: 3px;
@@ -102,7 +101,7 @@ input::placeholder {
 }
 
 .formulario__input-error {
-  font-size: 12px;
+  font-size: 15px;
   margin-bottom: 0;
   display: none;
 }
