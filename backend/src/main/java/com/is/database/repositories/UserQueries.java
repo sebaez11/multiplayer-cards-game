@@ -82,12 +82,34 @@ public class UserQueries {
             
         }catch (SQLException ex) {
             Logger.getLogger(User.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        
+        }   
         return false;
- 
     }
     
+     public User userInfo(String username){
+        User user = new User();
+        PreparedStatement pstatement = null;
+        ResultSet resultSet = null;
+        String sql = "SELECT * FROM users u WHERE u.username = '" + username + "'";       
+        try {
+            Connection conn = Database.getConection();
+            pstatement = conn.prepareStatement(sql);
+            resultSet = pstatement.executeQuery();
+            
+            if(resultSet != null){
+                resultSet.next();
+                user.setId(resultSet.getInt(1));
+                user.setUsername(resultSet.getString(3));
+                user.setEmail(resultSet.getString(4));
+                user.setPassword(resultSet.getString(5));
+                return user;
+            }
+            
+        }catch (SQLException ex) {
+            Logger.getLogger(User.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return user;
+    }
     public boolean validPassword(String username, String password){
         
         PreparedStatement pstatement = null;

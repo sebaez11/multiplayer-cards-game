@@ -67,7 +67,7 @@ public class UserService {
         if(userExistsByUsername){
             if(validPassword){
                         utils.responseOk(userResponse);
-                        userResponse.setUser(user);
+                        userResponse.setUser(userq.userInfo(user.getUsername()));
                 }else{
                     utils.responseIncorrectPassword(userResponse);
                 }

@@ -5,7 +5,7 @@
         <servlet-class>com.is.controllers.users.SignupController</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>LoginController</servlet-name>
+        <servlet-name>Login</servlet-name>
         <servlet-class>com.is.controllers.users.LoginController</servlet-class>
     </servlet>
     <servlet-mapping>
@@ -13,8 +13,8 @@
         <url-pattern>/Signup</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>LoginController</servlet-name>
-        <url-pattern>/LoginController</url-pattern>
+        <servlet-name>Login</servlet-name>
+        <url-pattern>/Login</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
