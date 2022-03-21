@@ -20,7 +20,7 @@ public class Constants {
     public static final String INVALID_EMAIL_MESSAGE = "Email ya se encuentra en uso";
     public static final String INVALID_USERNAME_MESSAGE = "Username ya se encuentra en uso";
     public static final String INVALID_PASSWORD_MESSAGE = "Las contraseñas no coinciden";  
-    public static final String INCORRECT_PASSWORD_MESSAGE = "La contraseña es incorrecta";
+    public static final String INCORRECT_INFORMATION_MESSAGE = "Usuario o contraseña incorrecta";
     public static final String USER_NOT_FOUND_MESSAGE = "Usuario no encontrado";
     public static final String UNAUTHORIZED_USER = "No está autorizado a ingresar a este lugar.";
     public static final String INTERNAL_SERVER_ERROR_MESSAGE = "Error en el servidor";

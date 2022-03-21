@@ -14,69 +14,66 @@ import com.is.utils.users.UtilsMethods;
  * @author sebastian-dev
  */
 public class UserService {
-    
+
     private UserQueries userq = new UserQueries();
-    
-    public String Signup(String obj){
-        
-        
+
+    public String Signup(String obj) {
+
         UtilsMethods utils = new UtilsMethods();
         User user = utils.jsonToUser(obj);
         UserResponse userResponse = new UserResponse();
-        
+
         boolean userExistsByEmail = userq.existsByEmail(user.getEmail());
         boolean userExistsByUsername = userq.existsByUsername(user.getUsername());
-        
-        if(!userExistsByEmail){
-            if(!userExistsByUsername){
-                if(user.getPassword().equals(user.getPassword_confirmation())){
+
+        if (!userExistsByEmail) {
+            if (!userExistsByUsername) {
+                if (user.getPassword().equals(user.getPassword_confirmation())) {
                     try {
                         user.setRole_id(1);
                         userq.create(user.getUsername(), user.getEmail(), user.getPassword());
                         userResponse.setUser(user);
                         utils.responseOk(userResponse);
-                    }catch(Exception e){
+                    } catch (Exception e) {
                         utils.responseInternalServerError(userResponse);
                     }
-                }else{
+                } else {
                     utils.responseInvalidPassword(userResponse);
                 }
-            }else {
+            } else {
                 utils.responseInvalidUsername(userResponse);
             }
-            
-        }else {
+
+        } else {
             utils.responseInvalidEmail(userResponse);
         }
-        
-        
-        
+
         return utils.convertToJson(userResponse);
-        
+
     }
-    
-    public String LoginService(String obj){
+
+    public String LoginService(String obj) {
         UtilsMethods utils = new UtilsMethods();
         User user = utils.jsonToUser(obj);
         UserResponse userResponse = new UserResponse();
-        
+
         //boolean userExistsByEmail = userq.existsByEmail(user.getEmail());
         boolean userExistsByUsername = userq.existsByUsername(user.getUsername());
         boolean validPassword = userq.validPassword(user.getUsername(), user.getPassword());
-        
-        if(userExistsByUsername){
-            if(validPassword){
-                        utils.responseOk(userResponse);
-                        userResponse.setUser(userq.userInfo(user.getUsername()));
-                }else{
-                    utils.responseIncorrectPassword(userResponse);
-                }
-            }else {
-                utils.responseUserNotFound(userResponse);
+
+        if (userExistsByUsername) {
+            if (validPassword) {
+                utils.responseOk(userResponse);
+                userResponse.setUser(userq.userInfo(user.getUsername()));
+            } else {
+                utils.responseIncorrectInfo(userResponse);
             }
-        
+        } else {
+            utils.responseIncorrectInfo(userResponse);
+        }
+
         return utils.convertToJson(userResponse);
-       
+
     }
-    
+
 }

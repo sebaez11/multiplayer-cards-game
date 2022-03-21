@@ -45,9 +45,9 @@ public class UtilsMethods {
 	userResponse.getStatus().setStatusDescription(Constants.INVALID_PASSWORD_MESSAGE);
 	userResponse.getStatus().setSeverity(Constants.SEVERITY_ERROR);
     }
-    public void responseIncorrectPassword(UserResponse userResponse){
+    public void responseIncorrectInfo(UserResponse userResponse){
         userResponse.getStatus().setStatusCode(400);
-	userResponse.getStatus().setStatusDescription(Constants.INCORRECT_PASSWORD_MESSAGE);
+	userResponse.getStatus().setStatusDescription(Constants.INCORRECT_INFORMATION_MESSAGE);
 	userResponse.getStatus().setSeverity(Constants.SEVERITY_ERROR);
     }
     
