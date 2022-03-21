@@ -16,7 +16,7 @@ public class GameRoomResponse {
         
     private Status status;
     private Game_room game_room;
-    private Collection<Game_room> Game_room;
+    private Collection<Game_room> game_rooms;
 
     public GameRoomResponse() {
         this.status = new Status();
@@ -38,11 +38,11 @@ public class GameRoomResponse {
         this.game_room = game_room;
     }
 
-    public void setGame_room2(Collection<Game_room> Game_room) {
-        this.Game_room = Game_room;
+    public void setGame_room2(Collection<Game_room> game_rooms) {
+        this.game_rooms = game_rooms;
     }
     public Collection<Game_room> getGame_Room(){
-        return Game_room;
+        return game_rooms;
     }
 
     

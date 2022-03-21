@@ -1,9 +1,13 @@
 com\is\models\response\UserResponse.class
 com\is\utils\Status.class
+com\is\controllers\game_room\viewStatusController.class
+com\is\models\Paused_game_info.class
 com\is\models\card_set.class
 com\is\models\Role.class
+com\is\services\PausedGameInfoService.class
 com\is\models\Game_room.class
 com\is\services\GameRoomService.class
+com\is\database\repositories\PausedGameInfoQueries.class
 com\is\models\UserRoom.class
 com\is\database\Database.class
 com\is\database\repositories\CardSetQueries.class

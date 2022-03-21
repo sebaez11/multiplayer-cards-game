@@ -20,6 +20,10 @@
         <servlet-name>RoomList</servlet-name>
         <servlet-class>com.is.controllers.game_room.RoomListController</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>viewStatus</servlet-name>
+        <servlet-class>com.is.controllers.game_room.viewStatusController</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Signup</servlet-name>
         <url-pattern>/Signup</url-pattern>
@@ -39,6 +43,10 @@
     <servlet-mapping>
         <servlet-name>RoomList</servlet-name>
         <url-pattern>/RoomList</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>viewStatus</servlet-name>
+        <url-pattern>/viewStatus</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

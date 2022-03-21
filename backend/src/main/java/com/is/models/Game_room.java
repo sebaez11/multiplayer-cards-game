@@ -11,14 +11,13 @@ package com.is.models;
 public class Game_room {
     
     String id,name;
-    int paused_game_info_id, card_set_id, user_id;
+    int  card_set_id, user_id;
     int status=1;// 1.in game - 2.paused game - 3.finished game 
     
     
-    public Game_room(String id, String name, int paused_game_info_id, int card_set_id, int status) {
+    public Game_room(String id, String name, int card_set_id, int status) {
         this.id = id;
         this.name = name;
-        this.paused_game_info_id = paused_game_info_id;
         this.card_set_id = card_set_id;
         this.status = status;
 
@@ -27,7 +26,6 @@ public class Game_room {
     public Game_room(){
         this.id = "";
         this.name = "";
-        this.paused_game_info_id = 0;
         this.card_set_id = 0;
         this.status = 1;
     }
@@ -48,10 +46,6 @@ public class Game_room {
         return name;
     }
 
-    public int getPaused_game_info_id() {
-        return paused_game_info_id;
-    }
-
     public int getCard_set_id() {
         return card_set_id;
     }
@@ -66,11 +60,6 @@ public class Game_room {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-
-    public void setPaused_game_info_id(int paused_game_info_id) {
-        this.paused_game_info_id = paused_game_info_id;
     }
 
     public void setCard_set_id(int card_set_id) {

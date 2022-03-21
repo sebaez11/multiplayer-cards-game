@@ -85,11 +85,12 @@ public class GameRoomQueries {
             
             
             while (resultSet.next()) {
+
                 Game_room game_room = new Game_room();
                 game_room.setId(resultSet.getString(1));
-                game_room.setName(resultSet.getString(4));
-                game_room.setCard_set_id(resultSet.getInt(3));
-                game_room.setStatus(resultSet.getInt(5));
+                game_room.setName(resultSet.getString(3));
+                game_room.setCard_set_id(resultSet.getInt(2));
+                game_room.setStatus(resultSet.getInt(4));
               
                 listado.add(game_room);
             }
@@ -98,5 +99,27 @@ public class GameRoomQueries {
             Logger.getLogger(Game_room.class.getName()).log(Level.SEVERE, null, ex);
         }
         return listado;
+    }
+   
+   public Boolean DeleteGameRoom(String game_room_id){
+        
+        PreparedStatement pstatement = null;
+        int resultSet = 0;
+        Boolean game_room_deleted = false;
+        String sql = "DELETE FROM game_room WHERE id='"+game_room_id+"'";
+        try {
+            Connection conn = Database.getConection();
+            pstatement = conn.prepareStatement(sql);
+            resultSet = pstatement.executeUpdate();
+            
+            if(resultSet > 0){
+                game_room_deleted= true;
+            }
+            
+        }catch (SQLException ex) {
+            Logger.getLogger(Game_room.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        return game_room_deleted;
     }
 }

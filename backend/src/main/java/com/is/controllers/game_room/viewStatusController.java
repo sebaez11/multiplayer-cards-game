@@ -4,7 +4,7 @@
  */
 package com.is.controllers.game_room;
 
-import com.is.services.GameRoomService;
+import com.is.services.PausedGameInfoService;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.stream.Collectors;
@@ -17,8 +17,8 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author drago
  */
-public class RoomListController extends HttpServlet {
-    GameRoomService gameRoomService  = new GameRoomService();
+public class viewStatusController extends HttpServlet {
+    PausedGameInfoService pausedGameInfoService = new PausedGameInfoService();
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
@@ -36,10 +36,10 @@ public class RoomListController extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet RoomListController</title>");            
+            out.println("<title>Servlet viewStatusController</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet RoomListController at " + request.getContextPath() + "</h1>");
+            out.println("<h1>Servlet viewStatusController at " + request.getContextPath() + "</h1>");
             out.println("</body>");
             out.println("</html>");
         }
@@ -57,9 +57,7 @@ public class RoomListController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        
-         PrintWriter out = response.getWriter();
-        out.println(gameRoomService.RoomList());
+        processRequest(request, response);
     }
 
     /**
@@ -73,7 +71,9 @@ public class RoomListController extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        String paused_game_info = request.getReader().lines().collect(Collectors.joining());    
+        PrintWriter out = response.getWriter();
+        out.println(pausedGameInfoService.ResponseStatus(paused_game_info));
     }
 
     /**

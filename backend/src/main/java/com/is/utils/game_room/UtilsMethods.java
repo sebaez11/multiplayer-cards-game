@@ -7,8 +7,10 @@ package com.is.utils.game_room;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.is.models.Game_room;
+import com.is.models.Paused_game_info;
 import com.is.models.UserRoom;
 import com.is.models.response.GameRoomResponse;
+import com.is.models.Paused_game_info;
 import com.is.utils.Constants;
 import java.nio.charset.Charset;
 import java.util.Random;
@@ -44,6 +46,13 @@ public class UtilsMethods {
         Game_room game_room = gson.fromJson(json, Game_room.class);
 
         return game_room;
+    }
+     public Paused_game_info jsonToPaused_game_info(String json) {
+        GsonBuilder builder = new GsonBuilder();
+        builder.setPrettyPrinting();
+        Gson gson = builder.create();
+        Paused_game_info paused_game_info = gson.fromJson(json, Paused_game_info.class);
+        return paused_game_info;
     }
 
 
@@ -98,4 +107,5 @@ public class UtilsMethods {
         // the resulting string 
         return thebuffer.toString();
     }
+
 }

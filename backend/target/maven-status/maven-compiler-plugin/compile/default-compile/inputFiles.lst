@@ -1,6 +1,8 @@
 C:\Users\drago\Desktop\Proyecto_is\multiplayer-cards-game\backend\src\main\java\com\is\models\UserRoom.java
 C:\Users\drago\Desktop\Proyecto_is\multiplayer-cards-game\backend\src\main\java\com\is\utils\users\UtilsMethods.java
+C:\Users\drago\Desktop\Proyecto_is\multiplayer-cards-game\backend\src\main\java\com\is\services\PausedGameInfoService.java
 C:\Users\drago\Desktop\Proyecto_is\multiplayer-cards-game\backend\src\main\java\com\is\database\repositories\CardQueries.java
+C:\Users\drago\Desktop\Proyecto_is\multiplayer-cards-game\backend\src\main\java\com\is\controllers\game_room\viewStatusController.java
 C:\Users\drago\Desktop\Proyecto_is\multiplayer-cards-game\backend\src\main\java\com\is\database\repositories\GameRoomQueries.java
 C:\Users\drago\Desktop\Proyecto_is\multiplayer-cards-game\backend\src\main\java\com\is\models\card_set.java
 C:\Users\drago\Desktop\Proyecto_is\multiplayer-cards-game\backend\src\main\java\com\is\utils\game_room\UtilsMethods.java
@@ -10,7 +12,9 @@ C:\Users\drago\Desktop\Proyecto_is\multiplayer-cards-game\backend\src\main\java\
 C:\Users\drago\Desktop\Proyecto_is\multiplayer-cards-game\backend\src\main\java\com\is\models\response\GameRoomResponse.java
 C:\Users\drago\Desktop\Proyecto_is\multiplayer-cards-game\backend\src\main\java\com\is\utils\Constants.java
 C:\Users\drago\Desktop\Proyecto_is\multiplayer-cards-game\backend\src\main\java\com\is\database\Database.java
+C:\Users\drago\Desktop\Proyecto_is\multiplayer-cards-game\backend\src\main\java\com\is\models\Paused_game_info.java
 C:\Users\drago\Desktop\Proyecto_is\multiplayer-cards-game\backend\src\main\java\com\is\controllers\game_room\CreateRoomController.java
+C:\Users\drago\Desktop\Proyecto_is\multiplayer-cards-game\backend\src\main\java\com\is\database\repositories\PausedGameInfoQueries.java
 C:\Users\drago\Desktop\Proyecto_is\multiplayer-cards-game\backend\src\main\java\com\is\controllers\users\SignupController.java
 C:\Users\drago\Desktop\Proyecto_is\multiplayer-cards-game\backend\src\main\java\com\is\database\repositories\CardSetQueries.java
 C:\Users\drago\Desktop\Proyecto_is\multiplayer-cards-game\backend\src\main\java\com\is\controllers\game_room\JoinRoomController.java
