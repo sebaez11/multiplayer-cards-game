@@ -3,17 +3,30 @@ const createModal = document.getElementById('createModal');
 const listGamesAdmin = document.getElementById('list-games-admin');
 const listCardsAdmin = document.getElementById('list-cards-admin');
 const createGameButton = document.getElementById('create-game-button');
+const createCardButton = document.getElementById('create-card-button');
+
 const formCreateGame = document.getElementById('form-create-game');
+const formCreateCard = document.getElementById('form-create-card');
 const infoGameCreate = document.getElementById('info-game-create');
+const infoGameCreateCard = document.getElementById('info-game-create-card');
+
 const buttonCreateGameModal = document.getElementById(
   'button-create-game-modal'
 );
+const buttonCreateGameCard = document.getElementById('button-create-game-card');
 
 buttonCreateGameModal.addEventListener('click', () => {
   formCreateGame.reset();
   infoGameCreate.classList.add('d-none');
 });
+
+buttonCreateGameCard.addEventListener('click', () => {
+  formCreateCard.reset();
+  infoGameCreateCard.classList.add('d-none');
+});
+
 createGameButton.addEventListener('click', createGame);
+createCardButton.addEventListener('click', createCard);
 
 async function createGame(evt) {
   evt.preventDefault();
@@ -51,22 +64,60 @@ async function createGame(evt) {
   }
 }
 
+async function createCard(evt) {
+  evt.preventDefault();
+  const formDataCard = new FormData(formCreateCard);
+  const data = {
+    image: formDataCard.get('card-image').name,
+    name: formDataCard.get('name-card'),
+    attribute: formDataCard.get('attribute-card'),
+    value: formDataCard.get('value-card'),
+  };
+  console.log(data);
+  if (Object.values(data).includes('')) {
+    infoGameCreateCard.classList.remove('d-none');
+    infoGameCreateCard.classList.remove('alert-success');
+    infoGameCreateCard.classList.add('alert-danger');
+    infoGameCreateCard.textContent = 'Debe rellenar todos los campos';
+    return;
+  }
+  const url = '';
+  try {
+    const createCardResponse = await fetch(url, {
+      method: 'POST',
+      data: formDataCard,
+    });
+    infoGameCreateCard.classList.remove('d-none');
+    infoGameCreateCard.classList.remove('alert-danger');
+    infoGameCreateCard.classList.add('alert-success');
+    infoGameCreateCard.textContent = 'Se ha creado la carta exitosamente';
+    formCreateCard.reset();
+    await getListCardsAdmin(true);
+  } catch (error) {
+    infoGameCreateCard.classList.remove('d-none');
+    infoGameCreateCard.classList.remove('alert-success');
+    infoGameCreateCard.classList.add('alert-danger');
+    infoGameCreateCard.textContent = 'Ha ocurrido un error al crear la carta';
+    formCreateCard.reset();
+  }
+}
+
 async function getListGamesAdmin(s) {
   const listGames = [
     {
       id: 1,
       name: 'Uno',
-      image: 'http://127.0.0.1:5500/frontend/images/card2.jpg',
+      image: './images/card2.jpg',
     },
     {
       id: 2,
       name: 'Time',
-      image: 'http://127.0.0.1:5500/frontend/images/card2.jpg',
+      image: './images/card2.jpg',
     },
     {
       id: 3,
       name: 'Poker',
-      image: 'http://127.0.0.1:5500/frontend/images/card2.jpg',
+      image: './images/card2.jpg',
     },
   ];
 

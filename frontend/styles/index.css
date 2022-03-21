@@ -305,7 +305,7 @@ main {
 #createCard .modal-dialog {
   width: auto !important;
   height: auto !important;
-  min-width: 50vw !important;
+  min-width: 30vw !important;
   font-size: var(--font-size-xx-small) !important;
   font-family: var(--principal-family);
 }
@@ -355,7 +355,7 @@ main {
 #editCard .modal-dialog {
   width: auto !important;
   height: auto !important;
-  min-width: 50vw !important;
+  min-width: 30vw !important;
   font-size: var(--font-size-xx-small) !important;
   font-family: var(--principal-family);
 }

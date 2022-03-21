@@ -1,0 +1,251 @@
+:root {
+  --principal-family: 'Indie Flower', cursive;
+  --secondary-family: 'Sansita Swashed', cursive;
+  --font-size-xxx-small: 1.5rem;
+  --font-size-xx-small: 2rem;
+  --font-size-small: 3.5rem;
+  --font-size-x-small: 2.5rem;
+  --font-size-x-medium: 5.5rem;
+  --font-size-medium: 4.5rem;
+  --font-size-big: 6rem;
+  --font-size-x-big: 7.5rem;
+  --color-white: white;
+  --color-black: black;
+}
+html {
+  font-size: 62.5%;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+}
+
+body {
+  max-width: 100vw !important;
+  max-height: 100vh !important;
+  overflow: hidden;
+}
+#board-game {
+  position: relative;
+  height: 100vh;
+  background-image: url('../images/board.jpg');
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.center-board {
+  position: relative;
+  width: 30%;
+  height: 30%;
+  background-color: transparent;
+  position: absolute;
+  top: 41%;
+  left: 39%;
+}
+.game-extra-cards {
+  width: 8%;
+  height: 22%;
+  background-color: transparent;
+  position: absolute;
+  top: 38%;
+  left: 20%;
+  position: relative;
+}
+.card-extra {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  max-height: 200px;
+  background-color: white;
+  border: 2px solid black;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+.section-player {
+  border: 1px solid black;
+}
+.section-player-top {
+  position: absolute;
+  background-color: #000000;
+  background-image: linear-gradient(0deg, #000000 0%, #b3134d 74%);
+  width: 50vw;
+  height: 10vh;
+  top: 0;
+  left: 25%;
+  border-radius: 0 0 50% 50%;
+}
+
+.section-player-right {
+  position: absolute;
+  background-color: #000000;
+  background-image: linear-gradient(0deg, #000000 0%, #b3134d 74%);
+  top: 45%;
+  left: 25%;
+  width: 50vw;
+  height: 10vh;
+  transform-origin: center;
+  transform: translate(47.5vw) rotate(90deg);
+  border-radius: 0 0 50% 50%;
+}
+
+.section-player-bottom {
+  position: absolute;
+  background-image: linear-gradient(180deg, #000000 0%, #b3134d 74%);
+  width: 50%;
+  height: 10vh;
+  bottom: 0;
+  left: 25%;
+  border-radius: 50% 50% 0 0;
+}
+
+.section-player-left {
+  position: absolute;
+  background-color: #000000;
+  background-image: linear-gradient(0deg, #000000 0%, #b3134d 74%);
+  top: 45%;
+  right: 25%;
+  width: 50vw;
+  height: 10vh;
+  transform-origin: center;
+  transform: translate(-47.5vw) rotate(-90deg);
+  border-radius: 0 0 50% 50%;
+}
+
+.cards-container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.card-player-top {
+  position: absolute;
+  top: 0;
+  left: 18%;
+}
+
+.card-player-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 18%;
+}
+
+.card-player-right {
+  position: absolute;
+  top: 0;
+  left: 18%;
+}
+.card-player-left {
+  position: absolute;
+  top: 0;
+  left: 18%;
+}
+.card-player {
+  width: 12%;
+  height: 20rem;
+  max-height: 160px;
+  background-color: white;
+  border: 2px solid black;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+.card-player-center {
+  position: absolute;
+  width: 20%;
+  height: 20rem;
+  max-height: 160px;
+  background-color: white;
+  border: 2px solid black;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.room-state {
+  position: absolute;
+  top: 1%;
+  right: 12%;
+  color: #eee8aa;
+}
+
+.initial-game {
+  position: absolute;
+  top: 1.5%;
+  left: 8%;
+  color: #eee8aa;
+}
+.points-user {
+  width: 12rem;
+  height: 2rem;
+  font-size: 2.5rem;
+  color: white;
+  position: absolute;
+}
+
+.points-user-a {
+  position: absolute;
+  top: 21%;
+  left: 46%;
+  color: white;
+}
+
+.points-user-b {
+  position: absolute;
+  top: 50%;
+  right: 8%;
+  transform: rotate(90deg);
+  color: white;
+}
+
+.points-user-c {
+  position: absolute;
+  top: 50%;
+  left: 8%;
+  color: white;
+  transform: rotate(-90deg);
+}
+
+.points-user-d {
+  position: absolute;
+  bottom: 23%;
+  left: 46%;
+  color: white;
+}
+
+.winner-score {
+  display: flex;
+  background-color: black;
+  position: absolute;
+  left: 40%;
+  top: 65%;
+  font-size: 2.5rem;
+  width: 40rem;
+  height: 5rem;
+  color: #eee8aa;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10%;
+}
+
+#pauseGameModal {
+  transform: translateY(0vh);
+}
+
+#pauseGameModal .modal-dialog {
+  width: 25vw !important;
+  height: auto !important;
+  max-width: 80vw !important;
+  font-size: var(--font-size-xx-small) !important;
+  font-family: var(--principal-family);
+}
+#pauseGameModal .modal-dialog .modal-content {
+  font-size: var(--font-size-xx-small) !important;
+  padding: 1rem;
+}
+
+#pauseGameModal .modal-dialog .modal-title {
+  font-size: var(--font-size-medium) !important;
+}
+#pauseGameModal .modal-dialog .btn,
+#pauseGameModal .modal-dialog .form-control {
+  font-size: var(--font-size-xx-small) !important;
+}
