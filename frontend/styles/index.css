@@ -274,6 +274,30 @@ main {
   font-size: var(--font-size-xx-small) !important;
 }
 
+#createRoomModal {
+  transform: translateY(15vh);
+}
+
+#createRoomModal .modal-dialog {
+  width: 25vw !important;
+  height: auto !important;
+  max-width: 80vw !important;
+  font-size: var(--font-size-xx-small) !important;
+  font-family: var(--principal-family);
+}
+#createRoomModal .modal-dialog .modal-content {
+  font-size: var(--font-size-xx-small) !important;
+  padding: 1rem;
+}
+
+#createRoomModal .modal-dialog .modal-title {
+  font-size: var(--font-size-medium) !important;
+}
+#createRoomModal .modal-dialog .btn,
+#createRoomModal .modal-dialog .form-control {
+  font-size: var(--font-size-xx-small) !important;
+}
+
 #createCard {
   transform: translateY(0vh);
 }
@@ -401,6 +425,33 @@ main {
   font-size: var(--font-size-xx-small) !important;
 }
 
+#listRoomsModal {
+  transform: translateY(10vh);
+}
+
+#listRoomsModal .modal-dialog {
+  width: 35vw !important;
+  height: auto !important;
+  max-width: 80vw !important;
+  font-size: var(--font-size-xx-small) !important;
+  font-family: var(--principal-family);
+}
+#listRoomsModal .modal-dialog .modal-content {
+  font-size: var(--font-size-xx-small) !important;
+  padding: 1rem;
+}
+
+#listRoomsModal .modal-dialog .modal-title {
+  font-size: var(--font-size-medium) !important;
+}
+#listRoomsModal .modal-dialog .btn,
+#listRoomsModal .modal-dialog .form-control {
+  font-size: var(--font-size-xx-small) !important;
+}
+.list-rooms-container {
+  overflow: auto;
+  max-height: 60vh;
+}
 .form-edit-game {
   width: 50%;
   margin: 0 auto;
