@@ -35,6 +35,10 @@
 				</div>
 
 				<form action="" class="formulario" id="form_registro">
+					<div class="formulario__mensaje" id="formulario__mensaje">
+						<p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor rellena el formulario
+							correctamente. </p>
+					</div>
 					<!-- Grupo: Usuario -->
 					<div class="formulario__grupo" id="grupo__usuario">
 						<label for="usuario" class="formulario__label">Usuario</label>
@@ -46,7 +50,7 @@
 						<p class="formulario__input-error">El usuario tiene que ser de 4 a 16 dígitos y solo puede
 							contener numeros, letras y guion bajo.</p>
 					</div>
-					<br>
+
 
 					<!-- Grupo: Correo Electronico -->
 					<div class="formulario__grupo" id="grupo__correo">
@@ -59,7 +63,6 @@
 						<p class="formulario__input-error">El correo solo puede contener letras, numeros, puntos,
 							guiones y guion bajo.</p>
 					</div>
-					<br>
 
 					<!-- Grupo: Contraseña -->
 					<div class="formulario__grupo" id="grupo__password">
@@ -71,7 +74,6 @@
 						</div>
 						<p class="formulario__input-error">La contraseña tiene que ser de 4 a 12 dígitos.</p>
 					</div>
-					<br>
 
 					<!-- Grupo: Contraseña 2 -->
 					<div class="formulario__grupo" id="grupo__password2">
@@ -84,18 +86,16 @@
 						<p class="formulario__input-error">Ambas contraseñas deben ser iguales.</p>
 					</div>
 					<br>
-					<br>
-
-					<div class="formulario__mensaje" id="formulario__mensaje">
-						<p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor rellena el formulario
-							correctamente. </p>
-					</div>
 
 					<div class="formulario__grupo formulario__grupo-btn-enviar">
 						<button type="submit" class="formulario__btn"
-							style="font-size: 18px; color: white; background-color: #E43E3E;width: 150px; margin-top: 10px">Enviar</button>
-						<p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Formulario enviado
-							exitosamente!</p>
+							style="font-size: 18px; color: white; background-color: #E43E3E;width: 150px; margin-top: 10px">Enviar
+						</button>
+						<div class="text-center">
+							<a href="login.html" class="text-light" style="font-size: 15px">Ingresar</a>
+							<p class="formulario_mensaje-exito" id="formulario_mensaje-exito">Formulario enviado
+								exitosamente!</p>
+						</div>
 					</div>
 				</form>
 			</div>

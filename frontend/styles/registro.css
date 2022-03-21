@@ -76,7 +76,6 @@ input::placeholder {
 }
 
 .formulario {
-  display: grid;
   grid-template-columns: 1fr 1fr;
 }
 
@@ -92,7 +91,7 @@ input::placeholder {
 }
 
 .formulario__input {
-  width: 260px;
+  width: 100%;
   background: #fff;
   border: 3px solid transparent;
   border-radius: 3px;
@@ -109,7 +108,7 @@ input::placeholder {
 }
 
 .formulario__input-error {
-  font-size: 12px;
+  font-size: 15px;
   margin-bottom: 0;
   display: none;
 }
@@ -138,11 +137,8 @@ input::placeholder {
 }
 
 .formulario__mensaje {
-  font-size: 8px;
-  height: 20px;
-  line-height: 20px;
+  font-size: 5px;
   background: #f66060;
-  padding: 0 15px;
   border-radius: 3px;
   display: none;
 }

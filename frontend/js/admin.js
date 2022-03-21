@@ -34,7 +34,7 @@ async function createGame(evt) {
   try {
     const createGameResponse = await fetch(url, {
       method: 'POST',
-      data,
+      data: formDataGame,
     });
     infoGameCreate.classList.remove('d-none');
     infoGameCreate.classList.remove('alert-danger');
