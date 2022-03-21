@@ -104,7 +104,6 @@ public class UserQueries {
                 user.setPassword(resultSet.getString(5));
                 return user;
             }
-            
         }catch (SQLException ex) {
             Logger.getLogger(User.class.getName()).log(Level.SEVERE, null, ex);
         }

@@ -16,6 +16,7 @@ public class Constants {
 
     public static final String SUCCESS_MESSAGE = "Transaccion exitosa";
     public static final String BAD_REQUEST_MESSAGE = "La información es incorrecta";
+    public static final String BAD_REQUEST = "Ha ocurrido un error";
     public static final String INVALID_EMAIL_MESSAGE = "Email ya se encuentra en uso";
     public static final String INVALID_USERNAME_MESSAGE = "Username ya se encuentra en uso";
     public static final String INVALID_PASSWORD_MESSAGE = "Las contraseñas no coinciden";  
